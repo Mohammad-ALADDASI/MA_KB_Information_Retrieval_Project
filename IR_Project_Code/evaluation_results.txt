@@ -1,0 +1,1243 @@
+IR System Evaluation Report
+===========================
+
+Query 1: procedural generation algorithms rogue-like terrain
+Type: Keyword
+Challenge Justification: Contains specific technical terms and game dev jargon.
+Relevant Document Set (n=20): 
+  - Architectural Implications of Graph Neural Networks
+  - Procedural generation
+  - Explainable artificial intelligence
+  - What are advantages of Artificial Neural Networks over Support Vector Machines?
+  - Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 0.80
+    Recall@10:    0.40
+    MAP@10:       0.36
+    Failure Case: 'interpretml/interpret README' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 47.6149) Explainable artificial intelligence
+      2. [REL] (Score: 42.4550) Procedural generation
+      3. [REL] (Score: 38.1495) Architectural Implications of Graph Neural Networks
+      4. [NOT] (Score: 37.7201) interpretml/interpret README
+      5. [REL] (Score: 37.4386) Aryia-Behroziuan/neurons README
+      6. [REL] (Score: 35.4391) Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+      7. [REL] (Score: 34.4223) Online Learning Algorithm for Time Series Forecasting Suitable for Low Cost Wireless Sensor Networks Nodes
+      8. [REL] (Score: 31.2868) An IoT Framework for Heart Disease Prediction based on MDCNN Classifier
+      9. [REL] (Score: 30.5467) Ethics of artificial intelligence
+      10. [NOT] (Score: 28.4099) Stable Diffusion
+  Model: TFIDF
+    Precision@10: 0.70
+    Recall@10:    0.35
+    MAP@10:       0.35
+    Failure Case: 'Privacy-preserving Graph Analytics: Secure Generation and Federated Learning' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 0.2531) Architectural Implications of Graph Neural Networks
+      2. [REL] (Score: 0.2346) Deep Learning for Procedural Content Generation
+      3. [REL] (Score: 0.1732) Procedural generation
+      4. [REL] (Score: 0.1633) Procedural Content Generation: Better Benchmarks for Transfer Reinforcement Learning
+      5. [REL] (Score: 0.1631) What are advantages of Artificial Neural Networks over Support Vector Machines?
+      6. [REL] (Score: 0.1602) Explainable artificial intelligence
+      7. [REL] (Score: 0.1593) ErikMoczi/Unity.ProceduralContentGeneration-Terrain README
+      8. [NOT] (Score: 0.1437) Privacy-preserving Graph Analytics: Secure Generation and Federated Learning
+      9. [NOT] (Score: 0.1407) Fast Processing of Large Graph Applications Using Asynchronous Architecture
+      10. [NOT] (Score: 0.1340) AI safety
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -165.9425) Architectural Implications of Graph Neural Networks
+      2. [REL] (Score: -166.5594) Procedural generation
+      3. [REL] (Score: -167.0410) Explainable artificial intelligence
+      4. [REL] (Score: -170.6670) Deep Learning for Procedural Content Generation
+      5. [REL] (Score: -171.0022) Online Learning Algorithm for Time Series Forecasting Suitable for Low Cost Wireless Sensor Networks Nodes
+      6. [REL] (Score: -171.2194) Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+      7. [REL] (Score: -171.7533) Procedural Content Generation: Better Benchmarks for Transfer Reinforcement Learning
+      8. [REL] (Score: -172.1484) What are advantages of Artificial Neural Networks over Support Vector Machines?
+      9. [REL] (Score: -172.3299) TDACNN: Target-domain-free Domain Adaptation Convolutional Neural Network for Drift Compensation in Gas Sensors
+      10. [REL] (Score: -172.3587) Distinguishing Computer-generated Graphics from Natural Images Based on Sensor Pattern Noise and Deep Learning
+--------------------------------------------------
+
+Query 2: iot edge device botnet ddos vulnerabilities
+Type: Keyword
+Challenge Justification: Dense string of cybersecurity and networking keywords.
+Relevant Document Set (n=20): 
+  - Enhancing IoT Security: A Novel Feature Engineering Approach for ML-Based Intrusion Detection Systems
+  - Enhancing IoT Security: A Novel Feature Engineering Approach for ML-Based Intrusion Detection Systems
+  - Machine and Deep Learning for IoT Security and Privacy: Applications, Challenges, and Future Directions
+  - Quarantining Malicious IoT Devices in Intelligent Sliced Mobile Networks
+  - CIoTA: Collaborative IoT Anomaly Detection via Blockchain
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 0.80
+    Recall@10:    0.40
+    MAP@10:       0.40
+    Failure Case: 'Fog computing' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 93.0285) CyberAlbSecOP/Awesome_CyberSec_Bible README
+      2. [REL] (Score: 77.2327) Enhancing IoT Security: A Novel Feature Engineering Approach for ML-Based Intrusion Detection Systems
+      3. [REL] (Score: 77.1441) Enhancing IoT Security: A Novel Feature Engineering Approach for ML-Based Intrusion Detection Systems
+      4. [REL] (Score: 75.0349) Quarantining Malicious IoT Devices in Intelligent Sliced Mobile Networks
+      5. [REL] (Score: 72.5175) CIoTA: Collaborative IoT Anomaly Detection via Blockchain
+      6. [REL] (Score: 67.4684) A Secure and Robust Scheme for Sharing Confidential Information in IoT Systems
+      7. [REL] (Score: 64.7714) Machine and Deep Learning for IoT Security and Privacy: Applications, Challenges, and Future Directions
+      8. [REL] (Score: 64.6285) priscilla100/ensemble_IDS README
+      9. [NOT] (Score: 64.5400) Fog computing
+      10. [NOT] (Score: 64.0311) sumododda/Intrusion-Detection-System-based-on-anomaly README
+  Model: TFIDF
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 0.3188) Enhancing IoT Security: A Novel Feature Engineering Approach for ML-Based Intrusion Detection Systems
+      2. [REL] (Score: 0.3132) Machine and Deep Learning for IoT Security and Privacy: Applications, Challenges, and Future Directions
+      3. [REL] (Score: 0.3114) Enhancing IoT Security: A Novel Feature Engineering Approach for ML-Based Intrusion Detection Systems
+      4. [REL] (Score: 0.3048) priscilla100/ensemble_IDS README
+      5. [REL] (Score: 0.3007) Internet of Things: Survey on Security and Privacy
+      6. [REL] (Score: 0.2560) A Secure and Robust Scheme for Sharing Confidential Information in IoT Systems
+      7. [REL] (Score: 0.2549) CIoTA: Collaborative IoT Anomaly Detection via Blockchain
+      8. [REL] (Score: 0.2537) Quarantining Malicious IoT Devices in Intelligent Sliced Mobile Networks
+      9. [REL] (Score: 0.2528) RTFM: How hard are IoT platform providers making it for their developers?
+      10. [REL] (Score: 0.2370) The Internet of Things: Perspectives on Security from RFID and WSN
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -331.8860) CyberAlbSecOP/Awesome_CyberSec_Bible README
+      2. [REL] (Score: -340.1761) Enhancing IoT Security: A Novel Feature Engineering Approach for ML-Based Intrusion Detection Systems
+      3. [REL] (Score: -340.3076) Quarantining Malicious IoT Devices in Intelligent Sliced Mobile Networks
+      4. [REL] (Score: -340.5702) Enhancing IoT Security: A Novel Feature Engineering Approach for ML-Based Intrusion Detection Systems
+      5. [REL] (Score: -343.5626) Machine and Deep Learning for IoT Security and Privacy: Applications, Challenges, and Future Directions
+      6. [REL] (Score: -344.0677) CIoTA: Collaborative IoT Anomaly Detection via Blockchain
+      7. [REL] (Score: -344.2585) priscilla100/ensemble_IDS README
+      8. [REL] (Score: -344.7947) A Secure and Robust Scheme for Sharing Confidential Information in IoT Systems
+      9. [REL] (Score: -345.3714) Internet of Things: Survey on Security and Privacy
+      10. [REL] (Score: -348.3631) RTFM: How hard are IoT platform providers making it for their developers?
+--------------------------------------------------
+
+Query 3: data center pue dynamic voltage frequency scaling
+Type: Keyword
+Challenge Justification: Highly specialized hardware and energy efficiency terminology.
+Relevant Document Set (n=20): 
+  - Cold Start Latency in Serverless Computing: A Systematic Review, Taxonomy, and Future Directions
+  - Kilovolt Pyroelectric Voltage Generation and Electrostatic Actuation With Fluidic Heating
+  - Perovskite PV-powered RFID: enabling low-cost self-powered IoT sensors
+  - Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware for AI Architectures
+  - Energy-Proportional Data Center Network Architecture Through OS, Switch and Laser Co-design
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 16.7863) Cold Start Latency in Serverless Computing: A Systematic Review, Taxonomy, and Future Directions
+      2. [REL] (Score: 13.1995) Perovskite PV-powered RFID: enabling low-cost self-powered IoT sensors
+      3. [REL] (Score: 11.3897) Supermicro
+      4. [REL] (Score: 10.5116) Kilovolt Pyroelectric Voltage Generation and Electrostatic Actuation With Fluidic Heating
+      5. [REL] (Score: 8.4295) Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware for AI Architectures
+      6. [REL] (Score: 8.0139) Exploitation of Transparent Conductive Oxides in the Implementation of a Window-Integrated Wireless Sensor Node
+      7. [REL] (Score: 7.6842) General-Purpose Multicore Architectures
+      8. [REL] (Score: 7.6723) ampnics/IoT_Based_Air_Quality_Monitoring_System README
+      9. [REL] (Score: 7.5410) A Novel Reconfigurable Architecture of a DSP Processor for Efficient Mapping of DSP Functions using Field Programmable DSP Arrays
+      10. [REL] (Score: 7.4894) Dalorex: A Data-Local Program Execution and Architecture for Memory-bound Applications
+  Model: TFIDF
+    Precision@10: 0.80
+    Recall@10:    0.40
+    MAP@10:       0.39
+    Failure Case: 'Share & Manage Data: Introduction & Overview | ICPSR' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 0.1170) Kilovolt Pyroelectric Voltage Generation and Electrostatic Actuation With Fluidic Heating
+      2. [REL] (Score: 0.1012) Energy-Proportional Data Center Network Architecture Through OS, Switch and Laser Co-design
+      3. [REL] (Score: 0.0943) Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+      4. [REL] (Score: 0.0851) Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware for AI Architectures
+      5. [REL] (Score: 0.0667) Cold Start Latency in Serverless Computing: A Systematic Review, Taxonomy, and Future Directions
+      6. [REL] (Score: 0.0651) Perovskite PV-powered RFID: enabling low-cost self-powered IoT sensors
+      7. [NOT] (Score: 0.0570) Share & Manage Data: Introduction & Overview | ICPSR
+      8. [REL] (Score: 0.0549) Dynamic Structure in Four-strategy Game: Theory and Experiment
+      9. [REL] (Score: 0.0540) An 860 MHz Wireless Surface Acoustic Wave Sensor with a Metal-Organic Framework Sensing Layer for CO2 and CH4
+      10. [NOT] (Score: 0.0511) FFPDG: Fast, Fair and Private Data Generation
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -58.6292) Cold Start Latency in Serverless Computing: A Systematic Review, Taxonomy, and Future Directions
+      2. [REL] (Score: -59.4247) Perovskite PV-powered RFID: enabling low-cost self-powered IoT sensors
+      3. [REL] (Score: -60.5822) Supermicro
+      4. [REL] (Score: -60.8904) Kilovolt Pyroelectric Voltage Generation and Electrostatic Actuation With Fluidic Heating
+      5. [REL] (Score: -61.8907) Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware for AI Architectures
+      6. [REL] (Score: -61.9111) Energy-Proportional Data Center Network Architecture Through OS, Switch and Laser Co-design
+      7. [REL] (Score: -61.9945) ampnics/IoT_Based_Air_Quality_Monitoring_System README
+      8. [REL] (Score: -62.3524) General-Purpose Multicore Architectures
+      9. [REL] (Score: -62.4852) An 860 MHz Wireless Surface Acoustic Wave Sensor with a Metal-Organic Framework Sensing Layer for CO2 and CH4
+      10. [REL] (Score: -62.5262) A Novel Reconfigurable Architecture of a DSP Processor for Efficient Mapping of DSP Functions using Field Programmable DSP Arrays
+--------------------------------------------------
+
+Query 4: format obsolescence checksum integrity digital archives
+Type: Keyword
+Challenge Justification: Niche archival and digital preservation concepts.
+Relevant Document Set (n=20): 
+  - Digital preservation
+  - Open Archival Information System
+  - Managing digital continuity - The National Archives
+  - Digital Preservation Coalition
+  - A Novel Approach to Analyze Fashion Digital Archive from Humanities
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 0.90
+    Recall@10:    0.45
+    MAP@10:       0.45
+    Failure Case: 'Own-Data-Privateer/hoardy-web README' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 24.4694) Digital preservation
+      2. [REL] (Score: 14.7699) Open Archival Information System
+      3. [REL] (Score: 13.2819) uga-libraries/general-aip README
+      4. [REL] (Score: 12.7635) Digital Preservation Coalition
+      5. [REL] (Score: 12.0572) A Novel Approach to Analyze Fashion Digital Archive from Humanities
+      6. [REL] (Score: 11.2966) Managing digital continuity - The National Archives
+      7. [REL] (Score: 11.1803) Blog - Digital Preservation Coalition
+      8. [REL] (Score: 11.0862) crkn-rcdr/Digital-Preservation README
+      9. [NOT] (Score: 10.5226) Own-Data-Privateer/hoardy-web README
+      10. [REL] (Score: 9.2861) Advanced Systems Format
+  Model: TFIDF
+    Precision@10: 0.90
+    Recall@10:    0.45
+    MAP@10:       0.45
+    Failure Case: 'Digital Democracy: Episode IV -- A New Hope, How a Corporation for Public Software Could Transform Digital Engagement for Government and Civil Society' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 0.1787) Digital preservation
+      2. [REL] (Score: 0.1512) Managing digital continuity - The National Archives
+      3. [REL] (Score: 0.1406) Advanced Systems Format
+      4. [REL] (Score: 0.1240) Digital Preservation at the Library of Congress
+      5. [REL] (Score: 0.1237) A Novel Approach to Analyze Fashion Digital Archive from Humanities
+      6. [REL] (Score: 0.1146) Blog - Digital Preservation Coalition
+      7. [REL] (Score: 0.0956) Digital Preservation Coalition
+      8. [REL] (Score: 0.0855) Representing Digital Assets using MPEG-21 Digital Item Declaration
+      9. [REL] (Score: 0.0831) Open Archival Information System
+      10. [NOT] (Score: 0.0825) Digital Democracy: Episode IV -- A New Hope, How a Corporation for Public Software Could Transform Digital Engagement for Government and Civil Society
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -43.6717) Digital preservation
+      2. [REL] (Score: -49.3033) Open Archival Information System
+      3. [REL] (Score: -50.7586) Digital Preservation Coalition
+      4. [REL] (Score: -50.8192) crkn-rcdr/Digital-Preservation README
+      5. [REL] (Score: -51.4988) Managing digital continuity - The National Archives
+      6. [REL] (Score: -51.5496) A Novel Approach to Analyze Fashion Digital Archive from Humanities
+      7. [REL] (Score: -51.7987) Advanced Systems Format
+      8. [REL] (Score: -51.8364) Digital Preservation at the Library of Congress
+      9. [REL] (Score: -52.0776) uga-libraries/general-aip README
+      10. [REL] (Score: -52.4763) Privacy-Preserving Secure Neighbor Discovery for Wireless Networks
+--------------------------------------------------
+
+Query 5: algorithmic redlining facial recognition demographic parity
+Type: Keyword
+Challenge Justification: Interdisciplinary concepts spanning AI ethics and sociology.
+Relevant Document Set (n=20): 
+  - Fairness in Machine Learning — Fairlearn 0.14.0.dev0 documentation
+  - Algorithmic bias
+  - Algorithmic bias detection and mitigation: Best practices and policies to reduce consumer harms | Brookings
+  - Conditional Image Generation and Manipulation for User-Specified Content
+  - Ethical AI for Young Digital Citizens: A Call to Action on Privacy Governance
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 22.8609) Fairness in Machine Learning — Fairlearn 0.14.0.dev0 documentation
+      2. [REL] (Score: 14.0701) Algorithmic bias
+      3. [REL] (Score: 13.4869) Algorithmic bias detection and mitigation: Best practices and policies to reduce consumer harms | Brookings
+      4. [REL] (Score: 9.8465) Ethics of artificial intelligence
+      5. [REL] (Score: 9.0062) Regulation of artificial intelligence in the United States
+      6. [REL] (Score: 7.7018) Conditional Image Generation and Manipulation for User-Specified Content
+      7. [REL] (Score: 7.6129) Aryia-Behroziuan/neurons README
+      8. [REL] (Score: 6.5922) Ethical AI for Young Digital Citizens: A Call to Action on Privacy Governance
+      9. [REL] (Score: 6.1861) Tools for Landscape Analysis of Optimisation Problems in Procedural Content Generation for Games
+      10. [REL] (Score: 6.0673) Conservative AI and social inequality: Conceptualizing alternatives to bias through social theory
+  Model: TFIDF
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 0.1701) Fairness in Machine Learning — Fairlearn 0.14.0.dev0 documentation
+      2. [REL] (Score: 0.0928) Algorithmic bias
+      3. [REL] (Score: 0.0673) Algorithmic bias detection and mitigation: Best practices and policies to reduce consumer harms | Brookings
+      4. [REL] (Score: 0.0536) Conditional Image Generation and Manipulation for User-Specified Content
+      5. [REL] (Score: 0.0517) Ethical AI for Young Digital Citizens: A Call to Action on Privacy Governance
+      6. [REL] (Score: 0.0381) Tools for Landscape Analysis of Optimisation Problems in Procedural Content Generation for Games
+      7. [REL] (Score: 0.0326) AKAGIwyf/UAV-Tracking README
+      8. [REL] (Score: 0.0324) A Marauder's Map of Security and Privacy in Machine Learning
+      9. [REL] (Score: 0.0322) Ethics of artificial intelligence
+      10. [REL] (Score: 0.0316) Conservative AI and social inequality: Conceptualizing alternatives to bias through social theory
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -64.7515) Fairness in Machine Learning — Fairlearn 0.14.0.dev0 documentation
+      2. [REL] (Score: -69.4582) Algorithmic bias detection and mitigation: Best practices and policies to reduce consumer harms | Brookings
+      3. [REL] (Score: -71.4546) Algorithmic bias
+      4. [REL] (Score: -72.4043) Conditional Image Generation and Manipulation for User-Specified Content
+      5. [REL] (Score: -72.6517) Regulation of artificial intelligence in the United States
+      6. [REL] (Score: -72.7193) AKAGIwyf/UAV-Tracking README
+      7. [REL] (Score: -73.1037) A Marauder's Map of Security and Privacy in Machine Learning
+      8. [REL] (Score: -73.1099) TDACNN: Target-domain-free Domain Adaptation Convolutional Neural Network for Drift Compensation in Gas Sensors
+      9. [REL] (Score: -73.2325) Ethical AI for Young Digital Citizens: A Call to Action on Privacy Governance
+      10. [REL] (Score: -73.3757) Ethics of artificial intelligence
+--------------------------------------------------
+
+Query 6: What are the performance advantages of using an Entity Component System over object-oriented programming in game engines?
+Type: Natural Language
+Challenge Justification: Long query with complex syntactic structure and comparative semantics.
+Relevant Document Set (n=20): 
+  - phisko/kengine README
+  - An Exploratory Approach for Game Engine Architecture Recovery
+  - darlingjs/darlingjs README
+  - What are advantages of Artificial Neural Networks over Support Vector Machines?
+  - SyDRA: An Approach to Understand Game Engine Architecture
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 0.80
+    Recall@10:    0.40
+    MAP@10:       0.39
+    Failure Case: 'amanchadha/coursera-gan-specialization README' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 41.9897) phisko/kengine README
+      2. [REL] (Score: 38.7641) scottcgi/Mojoc README
+      3. [REL] (Score: 32.0746) darlingjs/darlingjs README
+      4. [REL] (Score: 28.2981) wvulibraries/mfcs README
+      5. [REL] (Score: 27.7941) Procedural generation
+      6. [REL] (Score: 27.6061) Open Archival Information System
+      7. [REL] (Score: 26.8131) An Exploratory Approach for Game Engine Architecture Recovery
+      8. [NOT] (Score: 26.6086) amanchadha/coursera-gan-specialization README
+      9. [NOT] (Score: 26.3301) Leadership and Governance | Open Source Guides
+      10. [REL] (Score: 26.1070) facebookexperimental/Robyn README
+  Model: TFIDF
+    Precision@10: 0.90
+    Recall@10:    0.45
+    MAP@10:       0.43
+    Failure Case: 'Video game preservation' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 0.2250) phisko/kengine README
+      2. [REL] (Score: 0.1849) SyDRA: An Approach to Understand Game Engine Architecture
+      3. [REL] (Score: 0.1585) An Exploratory Approach for Game Engine Architecture Recovery
+      4. [REL] (Score: 0.1376) What are advantages of Artificial Neural Networks over Support Vector Machines?
+      5. [REL] (Score: 0.1345) The VGLC: The Video Game Level Corpus
+      6. [NOT] (Score: 0.1270) Video game preservation
+      7. [REL] (Score: 0.1257) Playing a 2D Game Indefinitely using NEAT and Reinforcement Learning
+      8. [REL] (Score: 0.1237) What is the difference between POST and PUT in HTTP?
+      9. [REL] (Score: 0.1221) darlingjs/darlingjs README
+      10. [REL] (Score: 0.1183) Using Game Theory to maximize the chance of victory in two-player sports
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -116.9761) phisko/kengine README
+      2. [REL] (Score: -117.8910) scottcgi/Mojoc README
+      3. [REL] (Score: -120.5762) What are advantages of Artificial Neural Networks over Support Vector Machines?
+      4. [REL] (Score: -121.0080) darlingjs/darlingjs README
+      5. [REL] (Score: -121.3352) An Exploratory Approach for Game Engine Architecture Recovery
+      6. [REL] (Score: -121.8047) SyDRA: An Approach to Understand Game Engine Architecture
+      7. [REL] (Score: -122.1265) Evaluation of Game Templates to support Programming Activities in Schools
+      8. [REL] (Score: -122.6762) The VGLC: The Video Game Level Corpus
+      9. [REL] (Score: -122.8184) Playing a 2D Game Indefinitely using NEAT and Reinforcement Learning
+      10. [REL] (Score: -123.0192) What is the difference between POST and PUT in HTTP?
+--------------------------------------------------
+
+Query 7: How did the transition from ARPANET to TCP/IP in 1983 change global network infrastructure?
+Type: Natural Language
+Challenge Justification: Contains historical entities, dates, and requires relational understanding.
+Relevant Document Set (n=20): 
+  - A Brief History of the Internet - Internet Society
+  - History of the Internet
+  - Timeline of the history of the Internet
+  - Internet | Description, History, Uses, & Facts | Britannica
+  - Android dealing with IoT devices with NO Internet connection
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 0.90
+    Recall@10:    0.45
+    MAP@10:       0.43
+    Failure Case: 'poly-mcp/IoT-Edge-MCP-Server README' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 44.7144) A Brief History of the Internet - Internet Society
+      2. [REL] (Score: 38.1025) History of the Internet
+      3. [REL] (Score: 29.0309) Timeline of the history of the Internet
+      4. [REL] (Score: 27.2423) Android dealing with IoT devices with NO Internet connection
+      5. [REL] (Score: 26.3297) Internet | Description, History, Uses, & Facts | Britannica
+      6. [REL] (Score: 24.9350) Green computing
+      7. [NOT] (Score: 23.7813) poly-mcp/IoT-Edge-MCP-Server README
+      8. [REL] (Score: 23.4630) Sustainable Cloud Computing | Amazon Web Services
+      9. [REL] (Score: 23.2339) Cloud computing
+      10. [REL] (Score: 23.0746) Digitalization and Energy – Analysis - IEA
+  Model: TFIDF
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 0.2296) A Brief History of the Internet - Internet Society
+      2. [REL] (Score: 0.1900) History of the Internet
+      3. [REL] (Score: 0.1338) How does the Google "Did you mean?" Algorithm work?
+      4. [REL] (Score: 0.1220) thomasbhatia/nwEPC---EPC-SAE-Gateway README
+      5. [REL] (Score: 0.1204) Internet | Description, History, Uses, & Facts | Britannica
+      6. [REL] (Score: 0.1107) Internet History | Computer History Museum
+      7. [REL] (Score: 0.0951) How do I change the URI (URL) for a remote Git repository?
+      8. [REL] (Score: 0.0947) Timeline of the history of the Internet
+      9. [REL] (Score: 0.0934) Representing Digital Assets for Long-Term Preservation using MPEG-21 DID
+      10. [REL] (Score: 0.0873) History of free and open-source software
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -96.1199) History of the Internet
+      2. [REL] (Score: -97.2856) A Brief History of the Internet - Internet Society
+      3. [REL] (Score: -104.7833) Android dealing with IoT devices with NO Internet connection
+      4. [REL] (Score: -105.5024) Timeline of the history of the Internet
+      5. [REL] (Score: -105.8062) On the importance of Internet eXchange Points for today's Internet ecosystem
+      6. [REL] (Score: -105.9158) How do I change the URI (URL) for a remote Git repository?
+      7. [REL] (Score: -105.9465) How does the Google "Did you mean?" Algorithm work?
+      8. [REL] (Score: -106.0238) Internet | Description, History, Uses, & Facts | Britannica
+      9. [REL] (Score: -106.0559) Sustainable Cloud Computing | Amazon Web Services
+      10. [REL] (Score: -106.1598) Broadband Internet and Social Capital
+--------------------------------------------------
+
+Query 8: What are the key differences between the EU AI Act and the US approach to artificial intelligence regulation?
+Type: Natural Language
+Challenge Justification: Asks for a comparison between geopolitical entities and policy frameworks.
+Relevant Document Set (n=20): 
+  - Ethics of artificial intelligence
+  - Explainable artificial intelligence
+  - Regulation of artificial intelligence
+  - European approach to artificial intelligence | Shaping Europe’s digital future
+  - Regulation of artificial intelligence in the United States
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 0.90
+    Recall@10:    0.45
+    MAP@10:       0.41
+    Failure Case: 'interpretml/interpret README' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 85.9880) Explainable artificial intelligence
+      2. [REL] (Score: 76.0054) Ethics of artificial intelligence
+      3. [REL] (Score: 75.9260) Regulation of artificial intelligence
+      4. [NOT] (Score: 73.2072) interpretml/interpret README
+      5. [REL] (Score: 70.4857) Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+      6. [REL] (Score: 69.1565) Regulation of artificial intelligence in the United States
+      7. [REL] (Score: 68.2945) AI safety
+      8. [REL] (Score: 65.4917) Artificial intelligence in education
+      9. [REL] (Score: 65.4738) Aryia-Behroziuan/neurons README
+      10. [REL] (Score: 65.1238) European approach to artificial intelligence | Shaping Europe’s digital future
+  Model: TFIDF
+    Precision@10: 0.90
+    Recall@10:    0.45
+    MAP@10:       0.45
+    Failure Case: 'High-level summary of the AI Act | EU Artificial Intelligence Act' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 0.3674) Regulation of artificial intelligence in the United States
+      2. [REL] (Score: 0.3648) Regulation of artificial intelligence
+      3. [REL] (Score: 0.3331) European approach to artificial intelligence | Shaping Europe’s digital future
+      4. [REL] (Score: 0.3115) Ethics of artificial intelligence
+      5. [REL] (Score: 0.2782) AI safety
+      6. [REL] (Score: 0.2721) The Act Texts | EU Artificial Intelligence Act
+      7. [REL] (Score: 0.2672) Artificial intelligence in education
+      8. [REL] (Score: 0.2659) Explainable artificial intelligence
+      9. [REL] (Score: 0.2568) Ethics of Artificial Intelligence - AI | UNESCO
+      10. [NOT] (Score: 0.2427) High-level summary of the AI Act | EU Artificial Intelligence Act
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -235.8031) Explainable artificial intelligence
+      2. [REL] (Score: -241.1403) Ethics of artificial intelligence
+      3. [REL] (Score: -241.3251) Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+      4. [REL] (Score: -241.3899) European approach to artificial intelligence | Shaping Europe’s digital future
+      5. [REL] (Score: -241.8637) Architectural Implications of Graph Neural Networks
+      6. [REL] (Score: -243.3356) What are advantages of Artificial Neural Networks over Support Vector Machines?
+      7. [REL] (Score: -243.4798) The Act Texts | EU Artificial Intelligence Act
+      8. [REL] (Score: -243.9843) Ethics of Artificial Intelligence - AI | UNESCO
+      9. [REL] (Score: -244.4252) Artificial intelligence in education
+      10. [REL] (Score: -244.5042) Regulation of artificial intelligence
+--------------------------------------------------
+
+Query 9: How can remote satellite sensing be used to track the rate of Amazon rainforest deforestation?
+Type: Natural Language
+Challenge Justification: Cross-domain query combining aerospace tech with environmental science.
+Relevant Document Set (n=20): 
+  - Explainable artificial intelligence
+  - Architectural Implications of Graph Neural Networks
+  - Aryia-Behroziuan/neurons README
+  - Online Learning Algorithm for Time Series Forecasting Suitable for Low Cost Wireless Sensor Networks Nodes
+  - Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 0.70
+    Recall@10:    0.35
+    MAP@10:       0.32
+    Failure Case: 'interpretml/interpret README' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 62.8725) Explainable artificial intelligence
+      2. [REL] (Score: 52.1519) Aryia-Behroziuan/neurons README
+      3. [REL] (Score: 49.8300) Online Learning Algorithm for Time Series Forecasting Suitable for Low Cost Wireless Sensor Networks Nodes
+      4. [REL] (Score: 49.2380) Architectural Implications of Graph Neural Networks
+      5. [NOT] (Score: 48.9221) interpretml/interpret README
+      6. [REL] (Score: 48.8835) Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+      7. [REL] (Score: 46.5197) Ethics of artificial intelligence
+      8. [NOT] (Score: 45.8537) Stable Diffusion
+      9. [NOT] (Score: 41.7069) Environmental monitoring
+      10. [REL] (Score: 41.2247) Remote Sensing - NASA Science
+  Model: TFIDF
+    Precision@10: 0.80
+    Recall@10:    0.40
+    MAP@10:       0.36
+    Failure Case: 'Regulation of artificial intelligence' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 0.2464) Architectural Implications of Graph Neural Networks
+      2. [REL] (Score: 0.1986) Explainable artificial intelligence
+      3. [REL] (Score: 0.1863) Ethics of artificial intelligence
+      4. [REL] (Score: 0.1677) Aryia-Behroziuan/neurons README
+      5. [NOT] (Score: 0.1645) Regulation of artificial intelligence
+      6. [REL] (Score: 0.1645) AI safety
+      7. [NOT] (Score: 0.1642) Regulation of artificial intelligence in the United States
+      8. [REL] (Score: 0.1609) What are advantages of Artificial Neural Networks over Support Vector Machines?
+      9. [REL] (Score: 0.1450) Artificial intelligence in education
+      10. [REL] (Score: 0.1445) Deep Learning for Procedural Content Generation
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -240.2615) Explainable artificial intelligence
+      2. [REL] (Score: -241.2163) Architectural Implications of Graph Neural Networks
+      3. [REL] (Score: -245.3191) Online Learning Algorithm for Time Series Forecasting Suitable for Low Cost Wireless Sensor Networks Nodes
+      4. [REL] (Score: -246.5239) Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+      5. [REL] (Score: -247.5176) Distinguishing Computer-generated Graphics from Natural Images Based on Sensor Pattern Noise and Deep Learning
+      6. [REL] (Score: -247.9256) TDACNN: Target-domain-free Domain Adaptation Convolutional Neural Network for Drift Compensation in Gas Sensors
+      7. [REL] (Score: -247.9772) Machine and Deep Learning for IoT Security and Privacy: Applications, Challenges, and Future Directions
+      8. [REL] (Score: -248.1013) What are advantages of Artificial Neural Networks over Support Vector Machines?
+      9. [REL] (Score: -248.1648) An IoT Framework for Heart Disease Prediction based on MDCNN Classifier
+      10. [REL] (Score: -248.1960) Aryia-Behroziuan/neurons README
+--------------------------------------------------
+
+Query 10: Why do many large open-source projects fail after the original creator steps down?
+Type: Natural Language
+Challenge Justification: Subjective question requiring semantic understanding of community dynamics.
+Relevant Document Set (n=20): 
+  - Architectural Implications of Graph Neural Networks
+  - Explainable artificial intelligence
+  - Aryia-Behroziuan/neurons README
+  - Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+  - Online Learning Algorithm for Time Series Forecasting Suitable for Low Cost Wireless Sensor Networks Nodes
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 0.80
+    Recall@10:    0.40
+    MAP@10:       0.35
+    Failure Case: 'interpretml/interpret README' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 55.6733) Explainable artificial intelligence
+      2. [REL] (Score: 46.2454) Aryia-Behroziuan/neurons README
+      3. [REL] (Score: 45.7335) Architectural Implications of Graph Neural Networks
+      4. [NOT] (Score: 43.0617) interpretml/interpret README
+      5. [REL] (Score: 41.7798) Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+      6. [REL] (Score: 40.6138) Ethics of artificial intelligence
+      7. [NOT] (Score: 39.7993) Stable Diffusion
+      8. [REL] (Score: 37.8808) Artificial Intelligence: examples of ethical dilemmas | UNESCO
+      9. [REL] (Score: 37.5875) Online Learning Algorithm for Time Series Forecasting Suitable for Low Cost Wireless Sensor Networks Nodes
+      10. [REL] (Score: 36.6329) An IoT Framework for Heart Disease Prediction based on MDCNN Classifier
+  Model: TFIDF
+    Precision@10: 0.60
+    Recall@10:    0.30
+    MAP@10:       0.27
+    Failure Case: 'What is open source software?' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 0.2491) Architectural Implications of Graph Neural Networks
+      2. [REL] (Score: 0.1813) Open Source Guides | Linux Foundation
+      3. [REL] (Score: 0.1669) Explainable artificial intelligence
+      4. [REL] (Score: 0.1553) Ethics of artificial intelligence
+      5. [NOT] (Score: 0.1522) What is open source software?
+      6. [NOT] (Score: 0.1521) What is open source?
+      7. [REL] (Score: 0.1520) What are advantages of Artificial Neural Networks over Support Vector Machines?
+      8. [NOT] (Score: 0.1463) Regulation of artificial intelligence in the United States
+      9. [REL] (Score: 0.1460) AI safety
+      10. [NOT] (Score: 0.1443) Regulation of artificial intelligence
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -221.2346) Architectural Implications of Graph Neural Networks
+      2. [REL] (Score: -223.9395) Explainable artificial intelligence
+      3. [REL] (Score: -226.9315) Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+      4. [REL] (Score: -228.1335) Online Learning Algorithm for Time Series Forecasting Suitable for Low Cost Wireless Sensor Networks Nodes
+      5. [REL] (Score: -228.7601) An IoT Framework for Heart Disease Prediction based on MDCNN Classifier
+      6. [REL] (Score: -228.8711) TDACNN: Target-domain-free Domain Adaptation Convolutional Neural Network for Drift Compensation in Gas Sensors
+      7. [REL] (Score: -229.3293) Aryia-Behroziuan/neurons README
+      8. [REL] (Score: -229.4755) Distinguishing Computer-generated Graphics from Natural Images Based on Sensor Pattern Noise and Deep Learning
+      9. [REL] (Score: -230.2411) Machine and Deep Learning for IoT Security and Privacy: Applications, Challenges, and Future Directions
+      10. [REL] (Score: -230.2563) What are advantages of Artificial Neural Networks over Support Vector Machines?
+--------------------------------------------------
+
+Query 11: engine performance
+Type: Ambiguous
+Challenge Justification: Could refer to game engines, search engines, or physical car engines.
+Relevant Document Set (n=20): 
+  - Playing a 2D Game Indefinitely using NEAT and Reinforcement Learning
+  - novusengine/NovusCore README
+  - CNN-based Steganalysis and Parametric Adversarial Embedding: a Game-Theoretic Framework
+  - Multi-objective Software Architecture Refactoring driven by Quality Attributes
+  - thunder-engine/thunder README
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 6.5625) novusengine/NovusCore README
+      2. [REL] (Score: 6.1974) Multi-objective Software Architecture Refactoring driven by Quality Attributes
+      3. [REL] (Score: 6.1782) Playing a 2D Game Indefinitely using NEAT and Reinforcement Learning
+      4. [REL] (Score: 6.1480) CNN-based Steganalysis and Parametric Adversarial Embedding: a Game-Theoretic Framework
+      5. [REL] (Score: 6.1216) SAPA: Self-Aware Polymorphic Architecture
+      6. [REL] (Score: 6.0356) General-Purpose Multicore Architectures
+      7. [REL] (Score: 6.0080) Quality Attributes Optimization of Software Architecture: Research Challenges and Directions
+      8. [REL] (Score: 5.8109) Towards Assessing Spread in Sets of Software Architecture Designs
+      9. [REL] (Score: 5.4039) bernhardrieder/PCGML-Game-Mechanics README
+      10. [REL] (Score: 5.2398) ketoo/NoahGameFrame README
+  Model: TFIDF
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 0.2984) thunder-engine/thunder README
+      2. [REL] (Score: 0.1789) SyDRA: An Approach to Understand Game Engine Architecture
+      3. [REL] (Score: 0.1400) phisko/kengine README
+      4. [REL] (Score: 0.1330) Playing a 2D Game Indefinitely using NEAT and Reinforcement Learning
+      5. [REL] (Score: 0.1320) An Exploratory Approach for Game Engine Architecture Recovery
+      6. [REL] (Score: 0.1218) willtobyte/carimbo README
+      7. [REL] (Score: 0.1197) Selecting Artificially-Generated Sentences for Fine-Tuning Neural Machine Translation
+      8. [REL] (Score: 0.1051) CNN-based Steganalysis and Parametric Adversarial Embedding: a Game-Theoretic Framework
+      9. [REL] (Score: 0.1033) novusengine/NovusCore README
+      10. [REL] (Score: 0.1000) Multi-objective Software Architecture Refactoring driven by Quality Attributes
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -12.1422) novusengine/NovusCore README
+      2. [REL] (Score: -12.2357) Playing a 2D Game Indefinitely using NEAT and Reinforcement Learning
+      3. [REL] (Score: -12.3419) CNN-based Steganalysis and Parametric Adversarial Embedding: a Game-Theoretic Framework
+      4. [REL] (Score: -12.4864) thunder-engine/thunder README
+      5. [REL] (Score: -12.6725) Multi-objective Software Architecture Refactoring driven by Quality Attributes
+      6. [REL] (Score: -12.7035) SAPA: Self-Aware Polymorphic Architecture
+      7. [REL] (Score: -12.8652) Selecting Artificially-Generated Sentences for Fine-Tuning Neural Machine Translation
+      8. [REL] (Score: -12.8764) bernhardrieder/PCGML-Game-Mechanics README
+      9. [REL] (Score: -12.8934) SyDRA: An Approach to Understand Game Engine Architecture
+      10. [REL] (Score: -12.8948) General-Purpose Multicore Architectures
+--------------------------------------------------
+
+Query 12: node power
+Type: Ambiguous
+Challenge Justification: Could mean computational graph nodes, network nodes, or hardware cluster power.
+Relevant Document Set (n=20): 
+  - Exploitation of Transparent Conductive Oxides in the Implementation of a Window-Integrated Wireless Sensor Node
+  - Structural Health Monitoring system with Narrowband IoT and MEMS sensors
+  - Defeating jamming with the power of silence: a game-theoretic analysis
+  - Solving the Hamiltonian path problem with a light-based computer
+  - Energy-Proportional Data Center Network Architecture Through OS, Switch and Laser Co-design
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 9.6190) Structural Health Monitoring system with Narrowband IoT and MEMS sensors
+      2. [REL] (Score: 9.1781) Defeating jamming with the power of silence: a game-theoretic analysis
+      3. [REL] (Score: 8.9964) Exploitation of Transparent Conductive Oxides in the Implementation of a Window-Integrated Wireless Sensor Node
+      4. [REL] (Score: 8.0286) Energy-Proportional Data Center Network Architecture Through OS, Switch and Laser Co-design
+      5. [REL] (Score: 7.2605) Fast Processing of Large Graph Applications Using Asynchronous Architecture
+      6. [REL] (Score: 7.0496) Sampling Trade-Offs in Duty-Cycled Systems for Air Quality Low-Cost Sensors
+      7. [REL] (Score: 6.9577) uvhw/Bitcoin-Foundation README
+      8. [REL] (Score: 6.4703) darlingjs/darlingjs README
+      9. [REL] (Score: 6.2484) Solving the Hamiltonian path problem with a light-based computer
+      10. [REL] (Score: 6.1719) An Authentication Protocol for Future Sensor Networks
+  Model: TFIDF
+    Precision@10: 0.90
+    Recall@10:    0.45
+    MAP@10:       0.44
+    Failure Case: 'Green computing' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 0.2467) "To sense" or "not to sense" in energy-efficient power control games
+      2. [REL] (Score: 0.2119) Solving the Hamiltonian path problem with a light-based computer
+      3. [REL] (Score: 0.2040) Exploitation of Transparent Conductive Oxides in the Implementation of a Window-Integrated Wireless Sensor Node
+      4. [REL] (Score: 0.1668) An Authentication Protocol for Future Sensor Networks
+      5. [REL] (Score: 0.1541) Structural Health Monitoring system with Narrowband IoT and MEMS sensors
+      6. [REL] (Score: 0.1261) Perovskite PV-powered RFID: enabling low-cost self-powered IoT sensors
+      7. [REL] (Score: 0.1205) Specifying a Game-Theoretic Extensive Form as an Abstract 5-ary Relation
+      8. [NOT] (Score: 0.1166) Green computing
+      9. [REL] (Score: 0.1075) Energy-Proportional Data Center Network Architecture Through OS, Switch and Laser Co-design
+      10. [REL] (Score: 0.1000) Energy consumption of smartphone components
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -12.3273) Exploitation of Transparent Conductive Oxides in the Implementation of a Window-Integrated Wireless Sensor Node
+      2. [REL] (Score: -12.4485) Structural Health Monitoring system with Narrowband IoT and MEMS sensors
+      3. [REL] (Score: -12.8758) Defeating jamming with the power of silence: a game-theoretic analysis
+      4. [REL] (Score: -12.9870) Energy-Proportional Data Center Network Architecture Through OS, Switch and Laser Co-design
+      5. [REL] (Score: -13.0371) Solving the Hamiltonian path problem with a light-based computer
+      6. [REL] (Score: -13.0844) An Authentication Protocol for Future Sensor Networks
+      7. [REL] (Score: -13.1682) uvhw/Bitcoin-Foundation README
+      8. [REL] (Score: -13.2766) "To sense" or "not to sense" in energy-efficient power control games
+      9. [REL] (Score: -13.4761) Specifying a Game-Theoretic Extensive Form as an Abstract 5-ary Relation
+      10. [REL] (Score: -13.7404) darlingjs/darlingjs README
+--------------------------------------------------
+
+Query 13: web
+Type: Ambiguous
+Challenge Justification: Extremely broad term; could refer to the WWW, spider webs, or data structures.
+Relevant Document Set (n=20): 
+  - World Wide Web | History, Uses & Benefits | Britannica
+  - jettbrains/-L- README
+  - The birth of the Web | CERN
+  - How do we control web page caching, across all browsers?
+  - Digital Preservation | The Signal
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 4.5331) World Wide Web | History, Uses & Benefits | Britannica
+      2. [REL] (Score: 4.5087) jettbrains/-L- README
+      3. [REL] (Score: 4.4940) The birth of the Web | CERN
+      4. [REL] (Score: 4.3792) How do we control web page caching, across all browsers?
+      5. [REL] (Score: 4.2398) Digital Preservation | The Signal
+      6. [REL] (Score: 4.1891) Integration of Cloud Computing and Web2.0 Collaboration Technologies in E-Learning
+      7. [REL] (Score: 4.1564) Own-Data-Privateer/hoardy-web README
+      8. [REL] (Score: 4.0709) Lakshan099/Soil-Monitoring-and-Controlling-System README
+      9. [REL] (Score: 3.9962) History of the Internet - Internet Society
+      10. [REL] (Score: 3.9957) bahree/GenAIBook README
+  Model: TFIDF
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 0.4611) World Wide Web | History, Uses & Benefits | Britannica
+      2. [REL] (Score: 0.3765) jettbrains/-L- README
+      3. [REL] (Score: 0.3099) The birth of the Web | CERN
+      4. [REL] (Score: 0.2503) How do we control web page caching, across all browsers?
+      5. [REL] (Score: 0.1661) Digital Preservation | The Signal
+      6. [REL] (Score: 0.1342) Integration of Cloud Computing and Web2.0 Collaboration Technologies in E-Learning
+      7. [REL] (Score: 0.1287) Own-Data-Privateer/hoardy-web README
+      8. [REL] (Score: 0.1245) History of the Internet - Internet Society
+      9. [REL] (Score: 0.1229) Cells in the Internet of Things
+      10. [REL] (Score: 0.1066) bahree/GenAIBook README
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -3.9455) jettbrains/-L- README
+      2. [REL] (Score: -4.4052) World Wide Web | History, Uses & Benefits | Britannica
+      3. [REL] (Score: -4.8586) Own-Data-Privateer/hoardy-web README
+      4. [REL] (Score: -4.9475) The birth of the Web | CERN
+      5. [REL] (Score: -5.3039) How do we control web page caching, across all browsers?
+      6. [REL] (Score: -5.3641) Digital Preservation | The Signal
+      7. [REL] (Score: -5.5590) Integration of Cloud Computing and Web2.0 Collaboration Technologies in E-Learning
+      8. [REL] (Score: -5.6313) History of the Internet - Internet Society
+      9. [REL] (Score: -5.6794) bahree/GenAIBook README
+      10. [REL] (Score: -5.7580) cwi-dis/iotsa README
+--------------------------------------------------
+
+Query 14: fork
+Type: Ambiguous
+Challenge Justification: Could refer to a GitHub fork, a Unix process fork, or a physical tool.
+Relevant Document Set (n=20): 
+  - Azure/Security-Copilot README
+  - explainX/explainx README
+  - violt-app/violt-core README
+  - How to Contribute to Open Source | Open Source Guides
+  - scottcgi/Mojoc README
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 6.9372) Azure/Security-Copilot README
+      2. [REL] (Score: 4.7835) explainX/explainx README
+      3. [REL] (Score: 3.7444) violt-app/violt-core README
+      4. [REL] (Score: 3.3312) scottcgi/Mojoc README
+      5. [REL] (Score: 2.9857) How to Contribute to Open Source | Open Source Guides
+      6. [REL] (Score: 2.9690) wvulibraries/mfcs README
+      7. [REL] (Score: 2.9374) Trusted-AI/AIF360 README
+      8. [REL] (Score: 2.5490) MateusNobreSilva/app_send_mail README
+      9. [REL] (Score: 2.4114) poly-mcp/IoT-Edge-MCP-Server README
+      10. [REL] (Score: 2.2193) hegdepavankumar/smart-garbage-monitoring-system-using-iot README
+  Model: TFIDF
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 0.1219) Azure/Security-Copilot README
+      2. [REL] (Score: 0.0348) explainX/explainx README
+      3. [REL] (Score: 0.0192) netizenorg/open-source-artware-workshop README
+      4. [REL] (Score: 0.0175) violt-app/violt-core README
+      5. [REL] (Score: 0.0149) Trusted-AI/AIF360 README
+      6. [REL] (Score: 0.0147) How to Contribute to Open Source | Open Source Guides
+      7. [REL] (Score: 0.0142) wvulibraries/mfcs README
+      8. [REL] (Score: 0.0127) hegdepavankumar/smart-garbage-monitoring-system-using-iot README
+      9. [REL] (Score: 0.0127) MateusNobreSilva/app_send_mail README
+      10. [REL] (Score: 0.0122) scottcgi/Mojoc README
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -5.9499) Azure/Security-Copilot README
+      2. [REL] (Score: -7.2368) explainX/explainx README
+      3. [REL] (Score: -7.5897) How to Contribute to Open Source | Open Source Guides
+      4. [REL] (Score: -7.7962) violt-app/violt-core README
+      5. [REL] (Score: -7.8768) scottcgi/Mojoc README
+      6. [REL] (Score: -7.9589) wvulibraries/mfcs README
+      7. [REL] (Score: -7.9666) Trusted-AI/AIF360 README
+      8. [REL] (Score: -8.0717) MateusNobreSilva/app_send_mail README
+      9. [REL] (Score: -8.1138) poly-mcp/IoT-Edge-MCP-Server README
+      10. [REL] (Score: -8.1779) hegdepavankumar/smart-garbage-monitoring-system-using-iot README
+--------------------------------------------------
+
+Query 15: auditing models
+Type: Ambiguous
+Challenge Justification: Could be financial auditing models or AI fairness/bias auditing models.
+Relevant Document Set (n=20): 
+  - Mitigating Bias in Machine Learning
+  - interpretml/interpret README
+  - Pro-AI Bias in Large Language Models
+  - AI safety
+  - SafeGen: Mitigating Sexually Explicit Content Generation in Text-to-Image Models
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 11.3177) Mitigating Bias in Machine Learning
+      2. [REL] (Score: 5.7129) interpretml/interpret README
+      3. [REL] (Score: 5.0571) Reverse Engineering and Security Evaluation of Commercial Tags for RFID-Based IoT Applications
+      4. [REL] (Score: 4.3791) sumododda/Intrusion-Detection-System-based-on-anomaly README
+      5. [REL] (Score: 4.2156) AI safety
+      6. [REL] (Score: 3.8265) CyberAlbSecOP/Awesome_CyberSec_Bible README
+      7. [REL] (Score: 3.3357) Pro-AI Bias in Large Language Models
+      8. [REL] (Score: 3.2162) SafeGen: Mitigating Sexually Explicit Content Generation in Text-to-Image Models
+      9. [REL] (Score: 3.2086) Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+      10. [REL] (Score: 3.1783) Few-Shot Optimization for Sensor Data Using Large Language Models: A Case Study on Fatigue Detection
+  Model: TFIDF
+    Precision@10: 0.90
+    Recall@10:    0.45
+    MAP@10:       0.45
+    Failure Case: 'Explainable artificial intelligence' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 0.2307) Mitigating Bias in Machine Learning
+      2. [REL] (Score: 0.1534) Pro-AI Bias in Large Language Models
+      3. [REL] (Score: 0.0882) Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+      4. [REL] (Score: 0.0842) interpretml/interpret README
+      5. [REL] (Score: 0.0761) SafeGen: Mitigating Sexually Explicit Content Generation in Text-to-Image Models
+      6. [REL] (Score: 0.0693) Few-Shot Optimization for Sensor Data Using Large Language Models: A Case Study on Fatigue Detection
+      7. [REL] (Score: 0.0682) Foundations of GenIR
+      8. [REL] (Score: 0.0611) Fairness | Machine Learning | Google for Developers
+      9. [REL] (Score: 0.0539) AI Gender Bias, Disparities, and Fairness: Does Training Data Matter?
+      10. [NOT] (Score: 0.0502) Explainable artificial intelligence
+  Model: LM
+    Precision@10: 0.80
+    Recall@10:    0.40
+    MAP@10:       0.39
+    Failure Case: 'Algorithmic bias' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: -12.5375) Mitigating Bias in Machine Learning
+      2. [REL] (Score: -12.6632) interpretml/interpret README
+      3. [REL] (Score: -14.2988) AI safety
+      4. [REL] (Score: -14.7138) Reverse Engineering and Security Evaluation of Commercial Tags for RFID-Based IoT Applications
+      5. [REL] (Score: -14.9037) sumododda/Intrusion-Detection-System-based-on-anomaly README
+      6. [REL] (Score: -15.0900) CyberAlbSecOP/Awesome_CyberSec_Bible README
+      7. [REL] (Score: -15.3358) Pro-AI Bias in Large Language Models
+      8. [NOT] (Score: -15.5347) Algorithmic bias
+      9. [NOT] (Score: -15.6356) Algorithmic bias detection and mitigation: Best practices and policies to reduce consumer harms | Brookings
+      10. [REL] (Score: -15.8336) SafeGen: Mitigating Sexually Explicit Content Generation in Text-to-Image Models
+--------------------------------------------------
+
+Query 16: procedrual genration algorithsm for terrain
+Type: Noisy/Typo-heavy
+Challenge Justification: Multiple spelling errors in key domain terms.
+Relevant Document Set (n=20): 
+  - Architectural Implications of Graph Neural Networks
+  - Explainable artificial intelligence
+  - Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+  - Online Learning Algorithm for Time Series Forecasting Suitable for Low Cost Wireless Sensor Networks Nodes
+  - What are advantages of Artificial Neural Networks over Support Vector Machines?
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 0.90
+    Recall@10:    0.45
+    MAP@10:       0.44
+    Failure Case: 'Procedural generation' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 45.9408) Explainable artificial intelligence
+      2. [REL] (Score: 40.5341) Architectural Implications of Graph Neural Networks
+      3. [REL] (Score: 37.5320) interpretml/interpret README
+      4. [REL] (Score: 37.3805) Online Learning Algorithm for Time Series Forecasting Suitable for Low Cost Wireless Sensor Networks Nodes
+      5. [REL] (Score: 35.4391) Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+      6. [REL] (Score: 35.0107) Aryia-Behroziuan/neurons README
+      7. [REL] (Score: 34.2681) An IoT Framework for Heart Disease Prediction based on MDCNN Classifier
+      8. [NOT] (Score: 30.5833) Procedural generation
+      9. [REL] (Score: 30.2300) CyberAlbSecOP/Awesome_CyberSec_Bible README
+      10. [REL] (Score: 30.0148) TDACNN: Target-domain-free Domain Adaptation Convolutional Neural Network for Drift Compensation in Gas Sensors
+  Model: TFIDF
+    Precision@10: 0.70
+    Recall@10:    0.35
+    MAP@10:       0.31
+    Failure Case: 'ErikMoczi/Unity.ProceduralContentGeneration-Terrain README' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 0.2847) Architectural Implications of Graph Neural Networks
+      2. [REL] (Score: 0.1832) What are advantages of Artificial Neural Networks over Support Vector Machines?
+      3. [REL] (Score: 0.1694) Deep Learning for Procedural Content Generation
+      4. [REL] (Score: 0.1657) Explainable artificial intelligence
+      5. [NOT] (Score: 0.1581) ErikMoczi/Unity.ProceduralContentGeneration-Terrain README
+      6. [REL] (Score: 0.1533) AI safety
+      7. [NOT] (Score: 0.1508) Regulation of artificial intelligence in the United States
+      8. [NOT] (Score: 0.1505) Regulation of artificial intelligence
+      9. [REL] (Score: 0.1476) Artificial intelligence in education
+      10. [REL] (Score: 0.1473) Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -211.5249) Explainable artificial intelligence
+      2. [REL] (Score: -212.3193) Architectural Implications of Graph Neural Networks
+      3. [REL] (Score: -216.9740) Online Learning Algorithm for Time Series Forecasting Suitable for Low Cost Wireless Sensor Networks Nodes
+      4. [REL] (Score: -217.5280) Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+      5. [REL] (Score: -218.1212) TDACNN: Target-domain-free Domain Adaptation Convolutional Neural Network for Drift Compensation in Gas Sensors
+      6. [REL] (Score: -218.5987) Distinguishing Computer-generated Graphics from Natural Images Based on Sensor Pattern Noise and Deep Learning
+      7. [REL] (Score: -218.7389) What are advantages of Artificial Neural Networks over Support Vector Machines?
+      8. [REL] (Score: -218.7839) An IoT Framework for Heart Disease Prediction based on MDCNN Classifier
+      9. [REL] (Score: -219.0252) Machine and Deep Learning for IoT Security and Privacy: Applications, Challenges, and Future Directions
+      10. [REL] (Score: -219.2828) Aryia-Behroziuan/neurons README
+--------------------------------------------------
+
+Query 17: ai biass and machne learnig farness
+Type: Noisy/Typo-heavy
+Challenge Justification: Heavy typos in common machine learning terms.
+Relevant Document Set (n=20): 
+  - Architectural Implications of Graph Neural Networks
+  - Explainable artificial intelligence
+  - Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+  - Artificial intelligence in education
+  - Ethics of artificial intelligence
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 0.90
+    Recall@10:    0.45
+    MAP@10:       0.45
+    Failure Case: 'CyberAlbSecOP/Awesome_CyberSec_Bible README' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 55.7920) Explainable artificial intelligence
+      2. [REL] (Score: 48.8139) Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+      3. [REL] (Score: 46.5182) interpretml/interpret README
+      4. [REL] (Score: 41.2490) Architectural Implications of Graph Neural Networks
+      5. [REL] (Score: 40.9822) Online Learning Algorithm for Time Series Forecasting Suitable for Low Cost Wireless Sensor Networks Nodes
+      6. [REL] (Score: 40.9528) Aryia-Behroziuan/neurons README
+      7. [REL] (Score: 39.6213) Ethics of artificial intelligence
+      8. [REL] (Score: 36.9033) AI safety
+      9. [NOT] (Score: 35.8719) CyberAlbSecOP/Awesome_CyberSec_Bible README
+      10. [REL] (Score: 35.8317) Artificial intelligence in education
+  Model: TFIDF
+    Precision@10: 0.90
+    Recall@10:    0.45
+    MAP@10:       0.43
+    Failure Case: 'European approach to artificial intelligence | Shaping Europe’s digital future' was retrieved but is not in the relevant set.
+    Retrieved Top 10:
+      1. [REL] (Score: 0.2748) Regulation of artificial intelligence in the United States
+      2. [REL] (Score: 0.2691) Regulation of artificial intelligence
+      3. [REL] (Score: 0.2673) Architectural Implications of Graph Neural Networks
+      4. [REL] (Score: 0.2539) Artificial intelligence in education
+      5. [REL] (Score: 0.2505) AI safety
+      6. [REL] (Score: 0.2443) Ethics of artificial intelligence
+      7. [NOT] (Score: 0.2423) European approach to artificial intelligence | Shaping Europe’s digital future
+      8. [REL] (Score: 0.2260) Ethics of Artificial Intelligence - AI | UNESCO
+      9. [REL] (Score: 0.2187) AI Risk Management Framework | NIST
+      10. [REL] (Score: 0.2104) Explainable artificial intelligence
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -243.6164) Explainable artificial intelligence
+      2. [REL] (Score: -248.4288) Architectural Implications of Graph Neural Networks
+      3. [REL] (Score: -250.8756) Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+      4. [REL] (Score: -252.4659) Online Learning Algorithm for Time Series Forecasting Suitable for Low Cost Wireless Sensor Networks Nodes
+      5. [REL] (Score: -253.3754) interpretml/interpret README
+      6. [REL] (Score: -253.4160) Aryia-Behroziuan/neurons README
+      7. [REL] (Score: -253.4313) What are advantages of Artificial Neural Networks over Support Vector Machines?
+      8. [REL] (Score: -254.1526) Artificial intelligence in education
+      9. [REL] (Score: -254.2290) Ethics of Artificial Intelligence - AI | UNESCO
+      10. [REL] (Score: -254.2949) Ethics of artificial intelligence
+--------------------------------------------------
+
+Query 18: enviroment monitorng snsors water quality
+Type: Noisy/Typo-heavy
+Challenge Justification: Dropped letters and misspelled keywords.
+Relevant Document Set (n=20): 
+  - Water - Environment - European Commission
+  - Sustainable Cloud Computing | Amazon Web Services
+  - Environmental technology
+  - Environmental monitoring
+  - Lakshan099/Soil-Monitoring-and-Controlling-System README
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 9.9083) Water - Environment - European Commission
+      2. [REL] (Score: 9.8862) Lakshan099/Soil-Monitoring-and-Controlling-System README
+      3. [REL] (Score: 9.4262) Environmental monitoring
+      4. [REL] (Score: 8.9487) Environmental technology
+      5. [REL] (Score: 8.7676) ClueFoxx/aravalli-forest-monitoring-dashboard README
+      6. [REL] (Score: 7.2484) Sustainable Cloud Computing | Amazon Web Services
+      7. [REL] (Score: 7.0496) Kilovolt Pyroelectric Voltage Generation and Electrostatic Actuation With Fluidic Heating
+      8. [REL] (Score: 6.9576) Earth Information System | NASA Earthdata
+      9. [REL] (Score: 6.4273) Climate Indicators | NASA Earthdata
+      10. [REL] (Score: 6.2650) TsaiRongFu/AI-Aquaculturing README
+  Model: TFIDF
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 0.6377) Water - Environment - European Commission
+      2. [REL] (Score: 0.2022) Sustainable Cloud Computing | Amazon Web Services
+      3. [REL] (Score: 0.1723) Quality Attributes Optimization of Software Architecture: Research Challenges and Directions
+      4. [REL] (Score: 0.1564) Sampling Trade-Offs in Duty-Cycled Systems for Air Quality Low-Cost Sensors
+      5. [REL] (Score: 0.1524) Kilovolt Pyroelectric Voltage Generation and Electrostatic Actuation With Fluidic Heating
+      6. [REL] (Score: 0.1522) Earth Observation Data Basics | NASA Earthdata
+      7. [REL] (Score: 0.1269) Environmental technology
+      8. [REL] (Score: 0.1263) Earth Information System | NASA Earthdata
+      9. [REL] (Score: 0.1218) ampnics/IoT_Based_Air_Quality_Monitoring_System README
+      10. [REL] (Score: 0.1205) Environmental monitoring
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -94.0950) Water - Environment - European Commission
+      2. [REL] (Score: -94.5209) Environmental monitoring
+      3. [REL] (Score: -95.4519) Environmental technology
+      4. [REL] (Score: -95.7688) Lakshan099/Soil-Monitoring-and-Controlling-System README
+      5. [REL] (Score: -96.1089) Sustainable Cloud Computing | Amazon Web Services
+      6. [REL] (Score: -96.2321) Quality Attributes Optimization of Software Architecture: Research Challenges and Directions
+      7. [REL] (Score: -96.2807) Earth Observation Data Basics | NASA Earthdata
+      8. [REL] (Score: -96.3224) Sampling Trade-Offs in Duty-Cycled Systems for Air Quality Low-Cost Sensors
+      9. [REL] (Score: -96.3448) ClueFoxx/aravalli-forest-monitoring-dashboard README
+      10. [REL] (Score: -96.3862) ampnics/IoT_Based_Air_Quality_Monitoring_System README
+--------------------------------------------------
+
+Query 19: histiry of tim berners lee wrold wide wbe
+Type: Noisy/Typo-heavy
+Challenge Justification: Misspelled entities and core internet terms.
+Relevant Document Set (n=20): 
+  - The birth of the Web | CERN
+  - World Wide Web | History, Uses & Benefits | Britannica
+  - History of the Internet - Internet Society
+  - Towards Standardizing AI Bias Exploration
+  - Algorithmic bias detection and mitigation: Best practices and policies to reduce consumer harms | Brookings
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 16.4214) The birth of the Web | CERN
+      2. [REL] (Score: 12.8728) World Wide Web | History, Uses & Benefits | Britannica
+      3. [REL] (Score: 11.4323) History of the Internet - Internet Society
+      4. [REL] (Score: 8.6063) Algorithmic bias detection and mitigation: Best practices and policies to reduce consumer harms | Brookings
+      5. [REL] (Score: 8.5436) Towards Standardizing AI Bias Exploration
+      6. [REL] (Score: 8.4589) History of the Internet
+      7. [REL] (Score: 8.3513) Onboarding Citizens to Digital Identity Systems
+      8. [REL] (Score: 8.2909) Using Game Theory to maximize the chance of victory in two-player sports
+      9. [REL] (Score: 8.2564) Open source software in quantum computing
+      10. [REL] (Score: 8.1714) Profiling and Improving the Duty-Cycling Performance of Linux-based IoT Devices
+  Model: TFIDF
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 0.1460) World Wide Web | History, Uses & Benefits | Britannica
+      2. [REL] (Score: 0.1457) The birth of the Web | CERN
+      3. [REL] (Score: 0.0708) Towards Standardizing AI Bias Exploration
+      4. [REL] (Score: 0.0648) Using Game Theory to maximize the chance of victory in two-player sports
+      5. [REL] (Score: 0.0640) History of the Internet - Internet Society
+      6. [REL] (Score: 0.0593) Onboarding Citizens to Digital Identity Systems
+      7. [REL] (Score: 0.0537) Structural Health Monitoring system with Narrowband IoT and MEMS sensors
+      8. [REL] (Score: 0.0522) Profiling and Improving the Duty-Cycling Performance of Linux-based IoT Devices
+      9. [REL] (Score: 0.0495) Algorithmic bias detection and mitigation: Best practices and policies to reduce consumer harms | Brookings
+      10. [REL] (Score: 0.0494) History of the Internet
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -137.1303) The birth of the Web | CERN
+      2. [REL] (Score: -138.1176) World Wide Web | History, Uses & Benefits | Britannica
+      3. [REL] (Score: -139.1778) Algorithmic bias detection and mitigation: Best practices and policies to reduce consumer harms | Brookings
+      4. [REL] (Score: -139.3106) History of the Internet - Internet Society
+      5. [REL] (Score: -141.2043) Digital Preservation | The Signal
+      6. [REL] (Score: -141.2383) Towards Standardizing AI Bias Exploration
+      7. [REL] (Score: -141.3518) Onboarding Citizens to Digital Identity Systems
+      8. [REL] (Score: -141.4160) Using Game Theory to maximize the chance of victory in two-player sports
+      9. [REL] (Score: -141.4480) Open source software in quantum computing
+      10. [REL] (Score: -141.4483) History of the Internet
+--------------------------------------------------
+
+Query 20: how to presrve old digtal files from obsolecense
+Type: Noisy/Typo-heavy
+Challenge Justification: Typo-heavy natural language query.
+Relevant Document Set (n=20): 
+  - ksh93/ast-open-archive README
+  - wvulibraries/mfcs README
+  - Advanced Systems Format
+  - How do I change the URI (URL) for a remote Git repository?
+  - uga-libraries/general-aip README
+  - ... and 15 more.
+
+Metrics & Retrieved Documents:
+  Model: BM25
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 14.7214) Advanced Systems Format
+      2. [REL] (Score: 14.1353) wvulibraries/mfcs README
+      3. [REL] (Score: 13.3573) ksh93/ast-open-archive README
+      4. [REL] (Score: 12.7679) Own-Data-Privateer/hoardy-web README
+      5. [REL] (Score: 11.8719) How do I change the URI (URL) for a remote Git repository?
+      6. [REL] (Score: 11.8166) News | Stanford HAI
+      7. [REL] (Score: 11.2486) MarcusBarnes/mik README
+      8. [REL] (Score: 11.1908) uga-libraries/general-aip README
+      9. [REL] (Score: 11.0562) Digital preservation
+      10. [REL] (Score: 10.9142) nyaundid/EC2-AWS-AND-SHELL README
+  Model: TFIDF
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: 0.1900) ksh93/ast-open-archive README
+      2. [REL] (Score: 0.1165) nyaundid/EC2-AWS-AND-SHELL README
+      3. [REL] (Score: 0.1151) wvulibraries/mfcs README
+      4. [REL] (Score: 0.1092) uga-libraries/general-aip README
+      5. [REL] (Score: 0.1041) intel-iot-devkit/joule-code-samples README
+      6. [REL] (Score: 0.0956) How to use java.net.URLConnection to fire and handle HTTP requests
+      7. [REL] (Score: 0.0922) How do I change the URI (URL) for a remote Git repository?
+      8. [REL] (Score: 0.0914) Advanced Systems Format
+      9. [REL] (Score: 0.0909) How to design browser security and privacy alerts
+      10. [REL] (Score: 0.0876) Network Operating Systems - CHM Revolution
+  Model: LM
+    Precision@10: 1.00
+    Recall@10:    0.50
+    MAP@10:       0.50
+    Failure Case: No obvious failure in top 10 (all relevant).
+    Retrieved Top 10:
+      1. [REL] (Score: -111.2924) ksh93/ast-open-archive README
+      2. [REL] (Score: -111.6727) Advanced Systems Format
+      3. [REL] (Score: -111.8620) wvulibraries/mfcs README
+      4. [REL] (Score: -112.2996) Own-Data-Privateer/hoardy-web README
+      5. [REL] (Score: -112.4438) How do I change the URI (URL) for a remote Git repository?
+      6. [REL] (Score: -113.0236) News | Stanford HAI
+      7. [REL] (Score: -113.4462) uga-libraries/general-aip README
+      8. [REL] (Score: -113.6474) MarcusBarnes/mik README
+      9. [REL] (Score: -113.7446) nyaundid/EC2-AWS-AND-SHELL README
+      10. [REL] (Score: -113.9333) Network Operating Systems - CHM Revolution
+--------------------------------------------------
+

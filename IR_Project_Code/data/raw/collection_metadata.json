@@ -1,0 +1,81 @@
+{
+  "collection_date": "2025-11-05 12:48:08",
+  "total_articles": 204,
+  "topics": {
+    "Artificial Intelligence": 17,
+    "Machine Learning": 17,
+    "Data Science": 17,
+    "Big Data": 17,
+    "Cloud Computing": 17,
+    "Bioinformatics": 17,
+    "Data Mining": 17,
+    "Cybersecurity": 17,
+    "Natural Language Processing": 17,
+    "Computer Vision": 17,
+    "Internet of Things": 17,
+    "Blockchain Technology": 17
+  },
+  "method": "Wikipedia Category API",
+  "categories_used": {
+    "Artificial Intelligence": [
+      "Artificial intelligence",
+      "Machine learning",
+      "AI safety"
+    ],
+    "Machine Learning": [
+      "Machine learning algorithms",
+      "Supervised learning",
+      "Ensemble learning"
+    ],
+    "Data Science": [
+      "Data analysis",
+      "Statistical methods",
+      "Data visualization"
+    ],
+    "Big Data": [
+      "Big data",
+      "Distributed computing architecture",
+      "NoSQL"
+    ],
+    "Cloud Computing": [
+      "Cloud computing",
+      "Cloud platforms",
+      "Virtualization software"
+    ],
+    "Bioinformatics": [
+      "Bioinformatics",
+      "Genomics",
+      "Computational biology"
+    ],
+    "Data Mining": [
+      "Data mining",
+      "Cluster analysis algorithms",
+      "Classification algorithms"
+    ],
+    "Cybersecurity": [
+      "Computer security",
+      "Cryptography",
+      "Network security"
+    ],
+    "Natural Language Processing": [
+      "Natural language processing",
+      "Computational linguistics",
+      "Speech recognition"
+    ],
+    "Computer Vision": [
+      "Computer vision",
+      "Image processing",
+      "Object recognition and categorization"
+    ],
+    "Internet of Things": [
+      "Internet of things",
+      "Wireless sensor network",
+      "Home automation"
+    ],
+    "Blockchain Technology": [
+      "Blockchains",
+      "Cryptocurrencies",
+      "Distributed data storage"
+    ]
+  }
+}

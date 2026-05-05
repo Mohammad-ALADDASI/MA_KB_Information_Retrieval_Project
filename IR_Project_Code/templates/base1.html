@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PSUT IR System{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='psut_IR_favicon.png') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='psut_IR_favicon.png') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --psut-navy: #0b2d72;
+            --psut-blue: #1457a8;
+            --psut-cyan: #16b8d8;
+            --ink: #172033;
+            --muted: #667085;
+            --page: #f4f8fb;
+            --surface: #ffffff;
+            --line: #d9e5ef;
+            --success: #1f9d68;
+            --warning: #f4a62a;
+            --danger: #cf3d3d;
+            --shadow: 0 18px 45px rgba(11, 45, 114, 0.12);
+            --soft-shadow: 0 10px 24px rgba(11, 45, 114, 0.10);
+            --toggle-light: linear-gradient(135deg, #fdf7d6 0%, #ffffff 45%, #dff7ff 100%);
+            --toggle-dark: linear-gradient(135deg, #07152e 0%, #132b55 55%, #0f7492 100%);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at top left, rgba(22, 184, 216, 0.18), transparent 34rem),
+                linear-gradient(135deg, #f7fbff 0%, var(--page) 45%, #eef6fb 100%);
+            color: var(--ink);
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        a { color: var(--psut-blue); }
+        a:hover { color: var(--psut-navy); }
+
+        .page-shell { max-width: 1220px; }
+
+        .hero-card {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--psut-navy), var(--psut-blue) 62%, var(--psut-cyan));
+            color: #fff;
+            border-radius: 28px;
+            padding: 1.6rem;
+            margin: 1rem 0 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-card::after {
+            content: "";
+            position: absolute;
+            inset: auto -5rem -8rem auto;
+            width: 18rem;
+            height: 18rem;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .brand-lockup {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .psut-logo-wrap {
+            width: 94px;
+            height: 94px;
+            flex: 0 0 94px;
+            display: grid;
+            place-items: center;
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 24px;
+            padding: .55rem;
+            box-shadow: 0 12px 30px rgba(4, 23, 63, 0.2);
+        }
+
+        .psut-logo { max-width: 80%; max-height: 90%; object-fit: contain;  }
+        .logo-fallback { color: var(--psut-navy); font-weight: 800; letter-spacing: .05em; }
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            width: 74px;
+            height: 38px;
+            border: 1px solid rgba(255, 255, 255, 0.48);
+            border-radius: 999px;
+            background: var(--toggle-light);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4px 8px;
+            transition: background .35s ease, border-color .35s ease, box-shadow .35s ease, transform .2s ease;
+            box-shadow: 0 12px 28px rgba(11, 45, 114, .18);
+            backdrop-filter: blur(14px);
+        }
+
+        .theme-toggle:hover { transform: translateY(-1px); box-shadow: 0 16px 34px rgba(11, 45, 114, .24); }
+        .theme-toggle:focus-visible { outline: 3px solid rgba(22, 184, 216, .45); outline-offset: 4px; }
+
+        .theme-toggle::before {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            left: 4px;
+            top: 3px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffffff, #e9f8fc);
+            box-shadow: 0 6px 16px rgba(11, 45, 114, .22);
+            transition: transform .35s cubic-bezier(.2,.8,.2,1), background .35s ease;
+        }
+
+        .theme-toggle .icon {
+            position: relative;
+            z-index: 1;
+            width: 24px;
+            height: 24px;
+            display: grid;
+            place-items: center;
+            font-size: 14px;
+            line-height: 1;
+            transition: opacity .25s ease, transform .35s ease;
+        }
+
+        .theme-toggle .sun { color: #f2a900; opacity: 1; transform: scale(1); }
+        .theme-toggle .moon { color: #dbeafe; opacity: .55; transform: scale(.9); }
+
+        body.dark-mode {
+            background:
+                radial-gradient(circle at top left, rgba(22, 184, 216, 0.12), transparent 32rem),
+                linear-gradient(135deg, #061226 0%, #0f172a 48%, #09182c 100%);
+            color: #e5e7eb;
+        }
+
+        body.dark-mode .theme-toggle {
+            background: var(--toggle-dark);
+            border-color: rgba(22, 184, 216, .36);
+            box-shadow: 0 14px 32px rgba(0, 0, 0, .34);
+        }
+
+        body.dark-mode .theme-toggle::before {
+            transform: translateX(36px);
+            background: linear-gradient(135deg, #dbeafe, #93c5fd);
+        }
+
+        body.dark-mode .theme-toggle .sun { opacity: .45; transform: scale(.9); }
+        body.dark-mode .theme-toggle .moon { opacity: 1; transform: scale(1.04); }
+
+        body.dark-mode .hero-card {
+            background: linear-gradient(135deg, #061735, #0b2d72 58%, #0b8faf);
+            box-shadow: 0 24px 55px rgba(0, 0, 0, .34);
+        }
+
+        body.dark-mode .sidebar,
+        body.dark-mode .search-panel,
+        body.dark-mode .result-card,
+        body.dark-mode .stats-box,
+        body.dark-mode .empty-state,
+        body.dark-mode .expansion-panel {
+            background: rgba(15, 23, 42, .88);
+            border-color: #27415f;
+            color: #e5e7eb;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, .25);
+        }
+
+        body.dark-mode .sidebar h5,
+        body.dark-mode .result-title { color: #93c5fd; }
+
+        body.dark-mode .text-muted,
+        body.dark-mode .footer-note { color: #a9b6c9 !important; }
+
+        body.dark-mode .result-snippet,
+        body.dark-mode .full-content-inner { color: #d1d5db; }
+
+        body.dark-mode .form-control,
+        body.dark-mode .form-select {
+            background: #0b1220;
+            color: #e5e7eb;
+            border-color: #334155;
+        }
+
+        body.dark-mode .form-control::placeholder { color: #94a3b8; }
+        body.dark-mode .full-content-box { background: #0b1220; border-color: #334155; }
+        body.dark-mode .suggestion-box { background: #0b1729; border-color: #27415f; }
+        body.dark-mode .exact-match { background: linear-gradient(90deg, rgba(31,157,104,.16), rgba(15,23,42,.88)); }
+        body.dark-mode .alert-info { background-color: rgba(22, 184, 216, .13); color: #a5f3fc; }
+        body.dark-mode .alert-warning { background-color: rgba(244, 166, 42, .14); color: #fde68a; }
+        body.dark-mode .alert-success { background-color: rgba(31, 157, 104, .14); color: #bbf7d0; }
+        body.dark-mode .alert-danger { background-color: rgba(207, 61, 61, .15); color: #fecaca; }
+        body.dark-mode code { background: #1e293b; color: #bfdbfe; }
+        .main-header {
+            margin: 0;
+            font-size: clamp(1.75rem, 3vw, 2.8rem);
+            line-height: 1.05;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+        }
+
+        .sub-header {
+            margin: .55rem 0 0;
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 1rem;
+        }
+
+        .course-meta {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: .75rem;
+            margin-top: 1.3rem;
+        }
+
+        .meta-pill {
+            background: rgba(255, 255, 255, 0.13);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 18px;
+            padding: .75rem .9rem;
+            backdrop-filter: blur(12px);
+        }
+
+        .meta-label {
+            display: block;
+            color: rgba(255,255,255,.68);
+            font-size: .72rem;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            font-weight: 700;
+            margin-bottom: .25rem;
+        }
+
+        .meta-value { display: block; font-weight: 700; color: #fff; }
+
+        .content-grid { align-items: start; }
+
+        .sidebar,
+        .search-panel,
+        .result-card,
+        .stats-box,
+        .empty-state,
+        .expansion-panel {
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            box-shadow: 0 12px 32px rgba(11, 45, 114, 0.08);
+        }
+
+        .sidebar { padding: 1.25rem; position: sticky; top: 1rem; }
+        .sidebar h5 { color: var(--psut-navy); font-weight: 800; }
+
+        .form-control,
+        .form-select {
+            border-color: var(--line);
+            border-radius: 14px;
+        }
+
+        .form-control:focus,
+        .form-select:focus,
+        .form-range:focus {
+            border-color: var(--psut-cyan);
+            box-shadow: 0 0 0 .2rem rgba(22, 184, 216, .18);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--psut-blue), var(--psut-cyan));
+            border: 0;
+            border-radius: 14px;
+            font-weight: 800;
+        }
+        .full-content-box {
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: #f9fcff;
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .full-content-inner {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #333;
+            white-space: pre-wrap;
+        }
+        .btn-primary:hover { filter: brightness(.96); }
+        .btn-outline-primary { color: var(--psut-blue); border-color: var(--psut-blue); border-radius: 14px; font-weight: 700; }
+        .btn-outline-primary:hover { background-color: var(--psut-blue); border-color: var(--psut-blue); }
+
+        .search-panel { padding: .75rem; }
+        .search-panel .input-group { gap: .65rem; }
+        .search-panel .form-control { min-height: 58px; padding-inline: 1.1rem; }
+        .search-panel .btn { padding-inline: 1.4rem; }
+
+        .alert { border: 0; border-radius: 18px; }
+        .alert-info { background-color: #e8f7fb; color: #075a74; }
+        .alert-warning { background-color: #fff5df; color: #77500c; }
+        .alert-success { background-color: #eaf8f1; color: #126043; }
+        .alert-danger { background-color: #fdeced; color: #8f222a; }
+
+        .result-card {
+            padding: 1.35rem;
+            margin-bottom: 1rem;
+            border-left: 6px solid var(--psut-blue);
+            transition: transform .18s ease, box-shadow .18s ease;
+        }
+
+        .result-card:hover { transform: translateY(-2px); box-shadow: 0 18px 38px rgba(11, 45, 114, .12); }
+        .exact-match { border-left-color: var(--success); background: linear-gradient(90deg, #effcf6, #fff); }
+        .result-title { font-size: 1.12rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--psut-navy); }
+        .result-url { color: var(--success); font-size: 0.9rem; margin-bottom: 0.5rem; word-break: break-all; }
+        .result-snippet { color: #344054; line-height: 1.7; }
+        .highlight { background-color: #fff1a6; padding: 2px 5px; border-radius: 6px; font-weight: 700; }
+        .badge.bg-primary { background: var(--psut-blue) !important; }
+
+        .stats-box { padding: 1rem; margin-bottom: 1.5rem; }
+        .suggestion-box { background-color: #f4fbfd; padding: 12px; border-radius: 16px; margin-bottom: 10px; border: 1px solid var(--line); }
+        code { color: var(--psut-navy); background: #edf5fb; border-radius: 6px; padding: .1rem .32rem; }
+
+        .feature-list { list-style: none; padding-left: 0; }
+        .feature-list li { margin-bottom: .35rem; }
+        .feature-list li::before { content: "✓"; color: var(--psut-cyan); font-weight: 900; margin-right: .4rem; }
+
+        .footer-note { color: var(--muted); }
+
+        .sidebar hr { border-color: var(--line); opacity: .9; }
+        .meta-pill, .sidebar, .search-panel, .result-card { backdrop-filter: blur(14px); }
+        .search-panel { margin-bottom: 1rem; }
+        .input-group-lg>.form-control { font-size: 1rem; }
+        .form-range::-webkit-slider-thumb { background: var(--psut-cyan); }
+        .form-range::-moz-range-thumb { background: var(--psut-cyan); border: 0; }
+        .result-url a { text-decoration: none; }
+        .result-url a:hover { text-decoration: underline; }
+        footer { border-color: var(--line) !important; }
+
+        body.dark-mode .sidebar hr,
+        body.dark-mode footer { border-color: #27415f !important; }
+
+        @media (max-width: 992px) {
+            .course-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .sidebar { position: static; margin-bottom: 1rem; }
+        }
+
+        @media (max-width: 576px) {
+            .hero-card { padding: 1.15rem; border-radius: 22px; }
+            .brand-lockup { align-items: flex-start; }
+            .psut-logo-wrap { width: 72px; height: 72px; flex-basis: 72px; border-radius: 18px; }
+            .course-meta { grid-template-columns: 1fr; }
+            .theme-toggle { top: 12px; right: 12px; width: 66px; height: 34px; }
+            .theme-toggle::before { width: 26px; height: 26px; }
+            body.dark-mode .theme-toggle::before { transform: translateX(32px); }
+            .search-panel .input-group { display: block; }
+            .search-panel .btn { width: 100%; margin-top: .65rem; min-height: 52px; }
+        }
+    </style>
+</head>
+<body>
+    <button id="dark-mode-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle light/dark mode">
+        <span class="icon sun" aria-hidden="true">☀</span>
+        <span class="icon moon" aria-hidden="true">☾</span>
+    </button>
+    <div class="container page-shell py-4">
+        <header class="hero-card">
+            <div class="brand-lockup">
+                <div class="psut-logo-wrap">
+                    <img class="psut-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/PSUT_Logo.png/500px-PSUT_Logo.png?_=20240606091636" alt="Princess Sumaya University for Technology logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="logo-fallback" style="display:none;">PSUT</span>
+                </div>
+                <div>
+                    <h1 class="main-header">Intelligent Information Retrieval System</h1> 
+                    
+                    <p class="sub-header">Search AI, Machine Learning, Computer Vision, NLP & Data Science Topics</p>
+                </div>
+            </div>
+
+            <div class="course-meta">
+                <div class="meta-pill">
+                    <span class="meta-label">Course</span>
+                    <span class="meta-value">{{ course_name|default('Information Retrieval') }}</span>
+                </div>
+                <div class="meta-pill">
+                    <span class="meta-label">Course No.</span>
+                    <span class="meta-value">{{ course_number|default('DS14455') }}</span>
+                </div>
+                <div class="meta-pill">
+                    <span class="meta-label">Student(s)</span>
+                    <span class="meta-value">{{ student_names|default('Kareem Bllan 20220458 & Mohammad O. ALADDASI 20220630') }}</span>
+                </div>
+                <div class="meta-pill">
+                    <span class="meta-label">Instructor</span>
+                    <span class="meta-value">{{ instructor_name|default('Dr Bushra Alhijawi') }}</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="row g-4 content-grid">
+            <aside class="col-lg-3">
+                <div class="sidebar">
+                    <form action="/" method="GET">
+                        <h5>Configuration</h5>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Select Model</label>
+                            <select name="model" id="model-select" class="form-select">
+                                <option value="BM25" {% if model == 'BM25' %}selected{% endif %}>BM25</option>
+                                <option value="TF-IDF" {% if model == 'TF-IDF' %}selected{% endif %}>TF-IDF</option>
+                                <option value="LM" {% if model == 'LM' %}selected{% endif %}>Language Model (LM)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Results: <span id="top_n_val">{{ top_n|default(10) }}</span></label>
+                            <input type="range" name="top_n" id="top-n-range" class="form-range" min="5" max="20" value="{{ top_n|default(10) }}" oninput="document.getElementById('top_n_val').innerText = this.value">
+                            <hr>
+<h5>LLM Augmentation</h5>
+
+<div class="form-check mb-2">
+    <input class="form-check-input" type="checkbox" name="use_llm" value="on" id="use-llm" {% if use_llm %}checked{% endif %}>
+    <label class="form-check-label small fw-semibold" for="use-llm">
+        Query Rewrite + Expansion
+    </label>
+</div>
+
+<div class="form-check mb-2">
+    <input class="form-check-input" type="checkbox" name="summary" value="on" id="use-summary" {% if use_summary %}checked{% endif %}>
+    <label class="form-check-label small fw-semibold" for="use-summary">
+        Summarize Top Results
+    </label>
+</div>
+
+<div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" name="explain" value="on" id="use-explain" {% if use_explanations %}checked{% endif %}>
+    <label class="form-check-label small fw-semibold" for="use-explain">
+        Explain Rankings
+    </label>
+</div>
+                        </div>
+                        <input type="hidden" name="q" value="{{ query }}">
+                        <button type="submit" class="btn btn-outline-primary btn-sm w-100">Update Settings</button>
+                    </form>
+                    <hr>
+                    <h5>Search Tips</h5>
+                    <ul class="small text-muted">
+                        <li>Use <b>"quotes"</b> for exact phrases.</li>
+                        <li>Try: AI, ML, NLP, CV.</li>
+                        <li>Example: <code>"deep learning" networks</code></li>
+                    </ul>
+                    <hr>
+                    <div class="alert alert-info p-3 small mb-0">
+                        <strong>Features</strong>
+                        <ul class="feature-list mt-2 mb-0">
+                            <li>Spell correction</li>
+                            <li>Abbreviation expansion</li>
+                            <li>Query expansion</li>
+                            <li>Domain detection</li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <main class="col-lg-9">
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+        <footer class="mt-5 pt-4 border-top text-center small footer-note">
+            Princess Sumaya University for Technology · Built by {{ student_names|default('Kareem Bllan & Mohammad ALADDASI') }}
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function syncSearchSettings() {
+            const modelSelect = document.getElementById('model-select');
+            const topNRange = document.getElementById('top-n-range');
+
+            const hiddenModel = document.getElementById('search-model');
+            const hiddenTopN = document.getElementById('search-top-n');
+
+            const useLLM = document.getElementById('use-llm');
+            const useSummary = document.getElementById('use-summary');
+            const useExplain = document.getElementById('use-explain');
+
+            const hiddenUseLLM = document.getElementById('search-use-llm');
+            const hiddenSummary = document.getElementById('search-summary');
+            const hiddenExplain = document.getElementById('search-explain');
+
+            if (modelSelect && hiddenModel) hiddenModel.value = modelSelect.value;
+            if (topNRange && hiddenTopN) hiddenTopN.value = topNRange.value;
+
+            if (useLLM && hiddenUseLLM) hiddenUseLLM.value = useLLM.checked ? "on" : "off";
+            if (useSummary && hiddenSummary) hiddenSummary.value = useSummary.checked ? "on" : "off";
+            if (useExplain && hiddenExplain) hiddenExplain.value = useExplain.checked ? "on" : "off";
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const modelSelect = document.getElementById('model-select');
+            const topNRange = document.getElementById('top-n-range');
+            const searchForm = document.getElementById('search-form');
+
+            if (modelSelect) modelSelect.addEventListener('change', syncSearchSettings);
+            if (topNRange) topNRange.addEventListener('input', syncSearchSettings);
+            if (searchForm) searchForm.addEventListener('submit', syncSearchSettings);
+            syncSearchSettings();
+        });
+        function toggleContent(id, btn) {
+            const el = document.getElementById(id);
+
+            if (el.style.display === "none") {
+                el.style.display = "block";
+                btn.innerText = "Hide Content";
+            } else {
+                el.style.display = "none";
+                btn.innerText = "View Full Content";
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggle = document.getElementById("dark-mode-toggle");
+            const setToggleLabel = () => {
+                const isDark = document.body.classList.contains("dark-mode");
+                toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+                toggle.setAttribute("aria-pressed", isDark ? "true" : "false");
+            };
+
+            if (localStorage.getItem("darkMode") === "enabled") {
+                document.body.classList.add("dark-mode");
+            }
+            setToggleLabel();
+
+            toggle.addEventListener("click", function () {
+                document.body.classList.toggle("dark-mode");
+                localStorage.setItem("darkMode", document.body.classList.contains("dark-mode") ? "enabled" : "disabled");
+                setToggleLabel();
+            });
+        });
+    </script>
+</body>
+</html>

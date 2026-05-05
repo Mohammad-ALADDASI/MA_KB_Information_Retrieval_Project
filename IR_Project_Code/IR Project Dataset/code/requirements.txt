@@ -1,0 +1,12 @@
+pandas
+python-dotenv
+arxiv
+wikipedia-api
+PyGithub
+trafilatura
+stackapi
+requests
+beautifulsoup4
+playwright
+lxml
+html5lib

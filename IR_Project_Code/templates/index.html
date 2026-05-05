@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/" method="GET" class="mb-4 search-panel" id="search-form">
+    <div class="input-group input-group-lg shadow-sm shadow-none">
+        <input type="text" name="q" class="form-control" placeholder='Try: "machine learning" algorithms or neural networks' value="{{ query }}" aria-label="Search query">
+        <input type="hidden" name="model" id="search-model" value="{{ model }}">
+        <input type="hidden" name="top_n" id="search-top-n" value="{{ top_n }}">
+        <input type="hidden" name="use_llm" id="search-use-llm" value="{{ 'on' if use_llm else 'off' }}">
+        <input type="hidden" name="summary" id="search-summary" value="{{ 'on' if use_summary else 'off' }}">
+        <input type="hidden" name="explain" id="search-explain" value="{{ 'on' if use_explanations else 'off' }}">
+        <button class="btn btn-primary" type="submit">Search</button>
+    </div>
+</form>
+
+{% if error %}
+    <div class="alert alert-danger">
+        <h5>Query Outside Domain</h5>
+        <p class="mb-0">Your query "{{ query }}" appears to be outside our knowledge base.<br>
+        <strong>Domain Confidence:</strong> {{ (domain_confidence * 100)|round(1) }}%</p>
+    </div>
+{% elif query %}
+    {% if corrected_query %}
+        <div class="alert alert-warning">
+            <strong>Did you mean:</strong> <code>{{ corrected_query }}</code>?<br>
+            <small>Searching with corrected query...</small>
+        </div>
+    {% elif suggestion %}
+        <div class="alert alert-info">
+            <strong>Suggestion:</strong> Did you mean <code>{{ suggestion[0] }}</code>?<br>
+            <small>Confidence: {{ (suggestion[1] * 100)|round(0) }}% | Currently searching for: <code>{{ query }}</code></small>
+        </div>
+    {% endif %}
+    {% if llm_error %}
+        <div class="alert alert-danger">
+            <strong>LLM Error</strong><br>
+            {{ llm_error }}
+        </div>
+    {% endif %}
+    {% if has_quotes %}
+        <div class="alert alert-success py-2">
+            <strong>Exact Phrase Search:</strong> Results matching the exact phrase are ranked higher.
+        </div>
+    {% endif %}
+
+    {% if llm_info %}
+        <div class="alert alert-info llm-panel">
+            <strong>LLM-Augmented Query</strong><br>
+            Original: <code>{{ llm_info.original_query }}</code><br>
+            Rewritten: <code>{{ llm_info.rewritten_query }}</code><br>
+            Expanded: <code>{{ llm_info.expanded_query }}</code>
+
+            {% if llm_info.expansion_terms %}
+                <hr>
+                <small class="fw-bold">Expansion Terms:</small><br>
+                {% for term in llm_info.expansion_terms %}
+                    <span class="badge bg-primary me-1 mb-1 llm-term-badge">{{ term }}</span>
+                {% endfor %}
+            {% endif %}
+        </div>
+    {% endif %}
+
+    {% if expansions %}
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="expansion-panel">
+                    <div class="card-body py-3">
+                        <small class="text-muted fw-bold">QUERY EXPANSION SUGGESTIONS</small>
+                        <div class="row mt-2">
+                            {% for exp in expansions %}
+                            <div class="col-md-6 mb-2">
+                                <div class="suggestion-box h-100">
+                                    <strong>{{ exp.type.replace('_', ' ').title() }}</strong><br>
+                                    <small>{{ exp.description }}</small><br>
+                                    <code class="d-block mt-2 p-2 bg-white border rounded small text-truncate">
+                                        <a href="/?q={{ exp.query }}&model={{ model }}&top_n={{ top_n }}&use_llm={{ 'on' if use_llm else 'off' }}&summary={{ 'on' if use_summary else 'off' }}&explain={{ 'on' if use_explanations else 'off' }}" class="text-decoration-none text-dark">{{ exp.query }}</a>
+                                    </code>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    {% if llm_info %}
+        <div class="alert alert-info">
+            <strong>LLM-Augmented Query</strong><br>
+            Original: <code>{{ llm_info.original_query }}</code><br>
+            Rewritten: <code>{{ llm_info.rewritten_query }}</code><br>
+            Expanded: <code>{{ llm_info.expanded_query }}</code>
+
+            {% if llm_info.expansion_terms %}
+                <hr>
+                <small class="fw-bold">Expansion Terms:</small><br>
+                {% for term in llm_info.expansion_terms %}
+                    <span class="badge bg-primary me-1 mb-1">{{ term }}</span>
+                {% endfor %}
+            {% endif %}
+        </div>
+    {% endif %}
+    <div class="stats-box">
+        <strong>Search Statistics</strong><br>
+        <div class="row small mt-2">
+            <div class="col-sm-6">
+                • Original: <code>{{ query }}</code><br>
+                • Processed: <code>{{ query_to_use }}</code><br>
+                • Model: <b>{{ model }}</b><br>
+                • LLM: <b>{{ 'On' if use_llm else 'Off' }}</b>
+            </div>
+            <div class="col-sm-6">
+                • Results: <b>{{ results|length }}</b><br>
+                • Time: <b>{{ "%.3f"|format(search_time) }}s</b><br>
+                • Confidence: <b>{{ (domain_confidence * 100)|round(1) }}%</b><br>
+                • Extras: <b>{% if use_summary %}Summary {% endif %}{% if use_explanations %}Explanations{% endif %}{% if not use_summary and not use_explanations %}None{% endif %}</b>
+            </div>
+        </div>
+    </div>
+
+    {% if llm_summary %}
+        <div class="alert alert-success llm-panel">
+            <strong>LLM Summary of Top Results</strong>
+            <div class="mb-0 mt-2 markdown-body">
+                {{ llm_summary_html|safe }}
+            </div>
+        </div>
+    {% endif %}
+
+    {% if exact_match_count > 0 %}
+        <div class="alert alert-success py-2 mb-3">
+            Found {{ exact_match_count }} document(s) with exact phrase match.
+        </div>
+    {% endif %}
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="mb-0 fw-bold">Top Results</h4>
+        <span class="small text-muted">Ranked by relevance score</span>
+    </div>
+
+    {% if not results or (results|length == 1 and results[0].score == 0) %}
+        <div class="alert alert-warning">No relevant results found. Try different keywords or check spelling.</div>
+    {% else %}
+        {% for res in results %}
+            <article class="result-card {% if res.exact_match %}exact-match{% endif %}">
+                <div class="d-flex justify-content-between gap-3">
+                    <div class="result-title">
+                        {% if res.exact_match %}★{% else %}{{ loop.index }}.{% endif %} {{ res.title }}
+                    </div>
+                    <span class="badge bg-primary rounded-pill align-self-start">{{ "%.4f"|format(res.score) }}</span>
+                </div>
+
+                {% if res.url %}
+                    <div class="result-url">Source: <a href="{{ res.url }}" target="_blank" rel="noopener">{{ res.url }}</a></div>
+                {% endif %}
+
+                <div class="result-snippet">{{ res.highlighted_snippet|safe }}...</div>
+
+                {% if res.llm_explanation %}
+                    <div class="alert alert-light border mt-3 small">
+                        <strong>Why this document was retrieved</strong><br>
+                        <div class="markdown-body">
+                            {{ res.llm_explanation_html|safe }}
+                        </div>
+                    </div>
+                {% endif %}
+
+                <button class="btn btn-sm btn-outline-primary mt-2" onclick="toggleContent('doc-{{ loop.index }}', this)">
+                    View Full Content
+                </button>
+
+                <div id="doc-{{ loop.index }}" class="full-content-box mt-3" style="display:none;">
+                    <div class="full-content-inner">
+                        {{ res.full_content }}
+                    </div>
+                </div>
+            </article>
+        {% endfor %}
+    {% endif %}
+{% else %}
+    <section class="empty-state text-center py-5 px-4 text-muted">
+        <h3 class="fw-bold welcome-title">Welcome to the PSUT IR System</h3>
+        <p class="mb-0">Enter a query above to search through the knowledge base.</p>
+    </section>
+{% endif %}
+{% endblock %}
