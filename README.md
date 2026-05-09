@@ -1,4 +1,19 @@
 # 🔍 Heterogeneous Information Retrieval System
+
+This video presents our Information Retrieval (IR) system developed using BM25, TF-IDF, and Language Models (LM), enhanced with Large Language Model (LLM) augmentation techniques such as query rewriting, query expansion, result summarization, and ranking explanation. The project demonstrates preprocessing, indexing, retrieval, evaluation, and a Flask-based user interface with support for keyword, natural language, ambiguous, and phrase queries. The system was evaluated using Precision@10, Recall@10, and MAP@10 to compare the effectiveness of classical retrieval methods and LLM-enhanced retrieval approaches. 
+
+Timeline:
+00:00 - 00:20 → Introduction
+00:20 - 00:55 → Project Overview & Dataset
+00:55 - 01:35 → Code Structure Explanation
+01:35 - 02:10 → Retrieval Models (BM25, TF-IDF, LM)
+02:10 - 02:45 → Interface Features & LLM Options
+02:45 - 03:10 → Keyword Query Demo
+03:10 - 03:35 → Natural Language Query Demo
+03:35 - 03:55 → Ambiguous Query Demo
+03:55 - 04:15 → Phrase Query Demo
+04:15 - 04:40 → LLM-Augmented Query Demo
+04:40 - 05:00 → Evaluation Results & Conclusion
 ![Demo Video ]([https://youtu.be/UDegcQr1-iA])(https://youtu.be/0NNBWFSb85w))
 
 ## 📌 Project Overview
