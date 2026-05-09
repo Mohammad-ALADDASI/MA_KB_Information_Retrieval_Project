@@ -4,16 +4,27 @@ This video presents our Information Retrieval (IR) system developed using BM25, 
 
 Timeline:
 00:00 - 00:20 → Introduction
+
 00:20 - 00:55 → Project Overview & Dataset
+
 00:55 - 01:35 → Code Structure Explanation
+
 01:35 - 02:10 → Retrieval Models (BM25, TF-IDF, LM)
+
 02:10 - 02:45 → Interface Features & LLM Options
+
 02:45 - 03:10 → Keyword Query Demo
+
 03:10 - 03:35 → Natural Language Query Demo
+
 03:35 - 03:55 → Ambiguous Query Demo
+
 03:55 - 04:15 → Phrase Query Demo
+
 04:15 - 04:40 → LLM-Augmented Query Demo
+
 04:40 - 05:00 → Evaluation Results & Conclusion
+
 ![Demo Video ]([https://youtu.be/UDegcQr1-iA])(https://youtu.be/0NNBWFSb85w))
 
 ## 📌 Project Overview
