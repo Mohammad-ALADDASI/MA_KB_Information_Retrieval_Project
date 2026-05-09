@@ -1,5 +1,5 @@
 # 🔍 Heterogeneous Information Retrieval System
-[![Demo Video ](https://youtu.be/UDegcQr1-iA)](https://youtu.be/UDegcQr1-iA)
+![Demo Video ]([https://youtu.be/UDegcQr1-iA](https://youtu.be/0NNBWFSb85w))
 ## 📌 Project Overview
 
 This project implements a **complete Information Retrieval (IR) system pipeline** under realistic conditions. It is divided into three milestones:
