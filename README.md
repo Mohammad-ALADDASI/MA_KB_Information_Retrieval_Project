@@ -26,7 +26,7 @@ Timeline:
 04:40 - 05:00 → Evaluation Results & Conclusion
 
 ![Demo Video ]([https://youtu.be/UDegcQr1-iA])(https://youtu.be/0NNBWFSb85w))
-
+Documentation: https://docs.google.com/document/d/1ynFGdEQevTd2_o-QfKIdhNidFLw2Gw7kzWafodaqPSA/edit?usp=sharing 
 ## 📌 Project Overview
 
 This project implements a **complete Information Retrieval (IR) system pipeline** under realistic conditions. It is divided into three milestones:
